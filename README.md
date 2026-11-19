@@ -10,8 +10,6 @@ Infinitely Many Finite-One Degrees* (2026). [arXiv:2609.00419v1](https://arxiv.o
 Patrizio Cintioli receives sole credit for the original article’s mathematical
 contributions. My contribution is the Lean formalization of his results.
 
-[Alphabeta Math](https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419)
-
 ## Dependency graph
 
 For readability, this diagram shows only selected formalized results from the
