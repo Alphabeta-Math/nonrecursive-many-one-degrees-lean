@@ -2,7 +2,15 @@
 
 All listed results compiled and passed the axiom audit.
 
-[Article](https://arxiv.org/pdf/2609.00419) · [Alphabeta Math](https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419)
+## Original article
+
+Patrizio Cintioli. *Every Nonrecursive Many-One Degree Contains Either One or
+Infinitely Many Finite-One Degrees* (2026). [arXiv:2609.00419v1](https://arxiv.org/abs/2609.00419v1)
+
+Patrizio Cintioli receives sole credit for the original article’s mathematical
+contributions. My contribution is the Lean formalization of his results.
+
+[Alphabeta Math](https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419)
 
 ## Dependency graph
 
