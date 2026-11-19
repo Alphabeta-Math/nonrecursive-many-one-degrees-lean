@@ -11,6 +11,7 @@ No original article statement.
 ### Alphabeta Math
 
 For $A,B\subseteq\mathbb N$, write $A\le_m B$ if a total computable $f:\mathbb N\to\mathbb N$ satisfies
+
 $$\forall n\in\mathbb N\quad(n\in A\ \Longleftrightarrow\ f(n)\in B).$$
 
 [Shared Math Library, def-computable-many-one-reducibility-interface, Definition (ordinary many-one reducibility on natural numbers)](https://alphabetamath.cc/item/def-computable-many-one-reducibility-interface)
@@ -45,11 +46,13 @@ Fix an effectively encoded set $X$.
 
 A subset $A\subseteq X$ is **computably enumerable** when either $A=\varnothing$
 or there exists a total computable function
+
 $$ e:\mathbb N\to X $$
+
 whose range is exactly $A$.
 
-If $L\subseteq\Sigma^*$ is a language over an alphabet $\Sigma$, then $L$ is
-**computably enumerable** when it is c.e. as a subset of $\Sigma^*$ under the
+If $L\subseteq\Sigma^{\ast}$ is a language over an alphabet $\Sigma$, then $L$ is
+**computably enumerable** when it is c.e. as a subset of $\Sigma^{\ast}$ under the
 chosen effective word encoding.
 
 [Shared Math Library, def-computably-enumerable-set, Definition](https://alphabetamath.cc/item/def-computably-enumerable-set)
@@ -124,10 +127,13 @@ No original article statement.
 
 For $n\ge1$, a set $A\subseteq\mathbb N^k$ is **$\Sigma_n^0$** when, for a
 primitive-recursive predicate $R$, membership has a formula
+
 $$ \vec x\in A\iff \exists y_1\forall y_2\cdots Qy_n\ R(\vec x,\vec y), $$
+
 where the quantifiers alternate and $Q$ is existential for odd $n$. It is
 **$\Pi_n^0$** when its complement is $\Sigma_n^0$, equivalently when the
 display begins universally. Put
+
 $$ \Delta_n^0:=\Sigma_n^0\cap\Pi_n^0. $$
 
 Bounded quantifiers in $R$ are allowed under the convention of
@@ -281,14 +287,20 @@ Let $(\varphi_e)_{e\in\mathbb N}$ be a numbering of the partial computable
 functions.
 
 The numbering is **universal** when the binary partial function
+
 $$ U(e,x)\simeq\varphi_e(x) $$
+
 is itself partial computable.
 
 The numbering is **acceptable** when it is universal and there exists a total
 computable function
+
 $$ s:\mathbb N^2\to\mathbb N $$
+
 such that for all $e,a,x\in\mathbb N$ one has
+
 $$ \varphi_{s(e,a)}(x)\simeq\varphi_e(\ulcorner a,x\urcorner_{\mathrm{seq}}), $$
+
 where $\ulcorner a,x\urcorner_{\mathrm{seq}}$ is the chosen code of the
 two-term sequence $(a,x)$.
 
@@ -461,9 +473,9 @@ Main result; compiled and axiom-checked.
 
 For every set $A$, the cylinder
 
-$$\operatorname{Cyl}(A)=\{\langle x,n\rangle:x\in A, n\in\mathbb{N}\}$$
+$$\mathrm{Cyl}(A)=\{\langle x,n\rangle:x\in A, n\in\mathbb{N}\}$$
 
-belongs to the same many-one degree as $A$, and $[\operatorname{Cyl}(A)]_{\mathrm{fo}}$ is the greatest finite-one degree in that many-one degree.
+belongs to the same many-one degree as $A$, and $[\mathrm{Cyl}(A)]_{\mathrm{fo}}$ is the greatest finite-one degree in that many-one degree.
 
 [§1, p. 1 (unnumbered). See also §2, pp. 2–3, for the pairing and degree conventions.](https://arxiv.org/pdf/2609.00419v1#page=1)
 
@@ -601,7 +613,7 @@ $$y\in P \iff \forall j\,\exists s\,Q(y,j,s).$$
 
 For each $k\in\mathbb{N}$, let
 
-$$H_k= \{y:\forall j<k\,\exists s\,Q(y,j,s)\}.$$
+$$H_k= \{y:\forall j\lt k\,\exists s\,Q(y,j,s)\}.$$
 
 The sequence $(H_k)_{k\in\mathbb{N}}$ is uniformly c.e., and
 
@@ -792,7 +804,7 @@ $$\langle x,n\rangle\longmapsto G(x,n)$$
 
 witnesses
 
-$$\operatorname{Cyl}(A)\leq_1 A.$$
+$$\mathrm{Cyl}(A)\leq_1 A.$$
 
 [§3, general observation in the proof of Lemma 2, pp. 4–5 (unnumbered)](https://arxiv.org/pdf/2609.00419v1#page=4)
 
@@ -841,13 +853,13 @@ Main result; compiled and axiom-checked.
 
 ### Article
 
-A partial computable function $\varphi$ is a partial ascending self-reduction of $A$ if, for every $x\in\operatorname{dom}\varphi$,
+A partial computable function $\varphi$ is a partial ascending self-reduction of $A$ if, for every $x\in\mathrm{dom}\,\varphi$,
 
-$$\varphi(x)>x \qquad\text{and}\qquad A(\varphi(x))=A(x).$$
+$$\varphi(x)\gt x \qquad\text{and}\qquad A(\varphi(x))=A(x).$$
 
 Assume that $A$ is nonrecursive and is not a cylinder. If $\varphi$ is a partial ascending self-reduction of $A$, then
 
-$$\mathbb{N}\setminus\operatorname{dom}\varphi$$
+$$\mathbb{N}\setminus\mathrm{dom}\,\varphi$$
 
 is infinite.
 
@@ -889,7 +901,7 @@ Main result; compiled and axiom-checked.
 
 Assume that $A$ is nonrecursive, is not a cylinder, and neither $A$ nor $\overline A$ is c.e. Then there is a set $C\equiv_{\mathrm{m}} A$ such that
 
-$$[A]_{\mathrm{fo}}<[C]_{\mathrm{fo}}<[\operatorname{Cyl}(A)]_{\mathrm{fo}}.$$
+$$[A]_{\mathrm{fo}}\lt [C]_{\mathrm{fo}}\lt [\mathrm{Cyl}(A)]_{\mathrm{fo}}.$$
 
 [§4, Theorem 5, p. 8](https://arxiv.org/pdf/2609.00419v1#page=8)
 
@@ -960,15 +972,15 @@ uniformly computable in $e,x,s$.
 
 We construct a set $N$ which is c.e. in $0'$, satisfying the requirements
 
-$$\mathcal U_e:\quad (V_x^e)_x\text{ is $A$-homogeneous} \Longrightarrow \exists x\, [V_x^e\text{ finite and }V_x^e\subseteq N],$$
+$$\mathcal U_e:\quad (V_x^e)_x\text{ is }A\text{-homogeneous} \Longrightarrow \exists x\, [V_x^e\text{ finite and }V_x^e\subseteq N],$$
 
 and
 
-$$\mathcal L_e:\quad \varphi_e\text{ is a partial ascending self-reduction of }A \Longrightarrow \exists m\, [m\notin N\cup\operatorname{dom}\varphi_e].$$
+$$\mathcal L_e:\quad \varphi_e\text{ is a partial ascending self-reduction of }A \Longrightarrow \exists m\, [m\notin N\cup\mathrm{dom}\,\varphi_e].$$
 
 Use the priority ordering
 
-$$\mathcal U_0>\mathcal L_0> \mathcal U_1>\mathcal L_1>\cdots.$$
+$$\mathcal U_0\gt\mathcal L_0\gt \mathcal U_1\gt\mathcal L_1\gt\cdots.$$
 
 The construction does not attempt to decide whether either antecedent in the requirements holds. Its actions are independent of $A$. The hypotheses involving $A$ are used only in the verification: Lemma 2 is used to verify the $\mathcal U_e$-requirements, while Lemma 4 is used to verify the $\mathcal L_e$-requirements.
 
@@ -1326,7 +1338,7 @@ $$C=p^{-1}(A).$$
 
 Suppose conversely that
 
-$$h:\operatorname{Cyl}(A)\leq_{\mathrm{fo}} C.$$
+$$h:\mathrm{Cyl}(A)\leq_{\mathrm{fo}} C.$$
 
 For each $x$, define
 
@@ -1342,7 +1354,7 @@ $$y=p(h(\langle x,n\rangle)),$$
 
 then
 
-$$y\in A \iff h(\langle x,n\rangle)\in C \iff \langle x,n\rangle\in\operatorname{Cyl}(A) \iff x\in A.$$
+$$y\in A \iff h(\langle x,n\rangle)\in C \iff \langle x,n\rangle\in\mathrm{Cyl}(A) \iff x\in A.$$
 
 [§4, proof of Theorem 5, p. 11 (unnumbered); C and p are defined earlier on p. 11](https://arxiv.org/pdf/2609.00419v1#page=11)
 
@@ -1428,11 +1440,11 @@ $$f_h(y)=h(u),$$
 
 where $u$ is the least number such that
 
-$$p(u)=y \qquad\text{and}\qquad h(u)>y.$$
+$$p(u)=y \qquad\text{and}\qquad h(u)\gt y.$$
 
 Whenever $f_h(y)$ is defined,
 
-$$f_h(y)>y$$
+$$f_h(y)\gt y$$
 
 and, because $h$ is a reduction,
 
@@ -1444,9 +1456,9 @@ If $y\in P$, then $p^{-1}(y)$ is infinite. Since $h$ is finite-one,
 
 $$h^{-1}(\{0,\ldots,y\}) = \bigcup_{z\leq y}h^{-1}(z)$$
 
-is finite. Hence some $u\in p^{-1}(y)$ satisfies $h(u)>y$, and so
+is finite. Hence some $u\in p^{-1}(y)$ satisfies $h(u)\gt y$, and so
 
-$$P\subseteq\operatorname{dom} f_h.$$
+$$P\subseteq\mathrm{dom}\, f_h.$$
 
 [§4, proof of Theorem 5, pp. 11–12 (p. 11 defines p and C, p. 12 states the result)](https://arxiv.org/pdf/2609.00419v1#page=12)
 
@@ -1495,15 +1507,15 @@ Several points concerning the effectiveness of the construction are worth emphas
 
 First, for a partial computable function $\varphi_e$, the condition
 
-$$m\notin\operatorname{dom}\varphi_e$$
+$$m\notin\mathrm{dom}\,\varphi_e$$
 
-is decidable in $0'$. Thus an $\mathcal L_e$-strategy can choose a marker with permanent certification that it lies outside $\operatorname{dom}\varphi_e$.
+is decidable in $0'$. Thus an $\mathcal L_e$-strategy can choose a marker with permanent certification that it lies outside $\mathrm{dom}\,\varphi_e$.
 
 Second, a $\mathcal U$-requirement acting at stage $s$ enumerates into $N$ only numbers at most $s$. Consequently, no action before stage $m$ can enumerate $m$ into $N$. Once the higher-priority $\mathcal U$-requirements have ceased acting, a newly chosen marker is also protected from every lower-priority $\mathcal U$-requirement. One which has already acted selected a row already contained in $N$; since the marker is chosen outside the current content of $N$, that row cannot contain it. One which has not yet acted includes the marker among its restraints and therefore selects a row disjoint from it.
 
 Finally, the finite parameters hardcoded in the proofs of Lemmas 2 and 4 need not be recovered by the priority construction. For a $\mathcal U_e$-requirement, the current finite restraint set $Z_e$ is explicitly available at every stage. Once it stabilizes, Lemma 2 guarantees the existence of a finite row disjoint from it, and the bounded $0'$-search eventually finds a stabilization pair $(x,t)$ without having to recognize that the restraints have stabilized. For an $\mathcal L_e$-requirement, Lemma 4 is used only to guarantee arbitrarily large elements of
 
-$$\mathbb{N}\setminus\operatorname{dom}\varphi_e,$$
+$$\mathbb{N}\setminus\mathrm{dom}\,\varphi_e,$$
 
 while each individual candidate is checked by the $0'$-test described above. Thus the two lemmas are used only existentially in the verification, and no uniform computation of the finite parameters appearing in their proofs is required.
 
