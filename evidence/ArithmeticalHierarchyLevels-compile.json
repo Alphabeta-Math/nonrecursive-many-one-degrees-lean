@@ -1,0 +1,28 @@
+{
+  "source_sha256": "093e7e0b8b85b176694ffd41ae256cbc856dbaae57b07cbfe9a1c2f8f189c94c",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ArithmeticalHierarchyLevels.olean",
+      "Proofs/ArithmeticalHierarchyLevels.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ArithmeticalHierarchyLevels-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ArithmeticalHierarchyLevels' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

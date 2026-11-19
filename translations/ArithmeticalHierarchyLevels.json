@@ -1,0 +1,6 @@
+{
+  "type": "(n k : Nat) → 1 ≤ n →\n  Set (Set (Fin k → Nat)) × Set (Set (Fin k → Nat)) × Set (Set (Fin k → Nat))",
+  "value": "fun n k _ =>\n  let quantify : (m : Nat) → Bool → ((Fin m → Nat) → Prop) → Prop :=\n    Nat.rec (motive := fun m => Bool → ((Fin m → Nat) → Prop) → Prop)\n      (fun _ matrix => matrix Fin.elim0)\n      (fun _ ih existential matrix =>\n        if existential then\n          ∃ y : Nat, ih false (fun ys => matrix (Fin.cons y ys))\n        else\n          ∀ y : Nat, ih true (fun ys => matrix (Fin.cons y ys)))\n  let sigma : Set (Set (Fin k → Nat)) :=\n    {A | ∃ R : (Fin k → Nat) → (Fin n → Nat) → Prop,\n      PrimrecRel R ∧ ∀ xs : Fin k → Nat, xs ∈ A ↔ quantify n true (R xs)}\n  let pi : Set (Set (Fin k → Nat)) := {A | Aᶜ ∈ sigma}\n  (sigma, pi, sigma ∩ pi)",
+  "source": "portal",
+  "sourceReason": "The general definition is supplied only by the Alphabeta Math Shared Math Library item def-sigma-n-pi-n-and-delta-n-sets (https://alphabetamath.cc/item/def-sigma-n-pi-n-and-delta-n-sets). The article-specific Research Portal and the supplied defect report (https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419/prerequisite-omissions-and-potential-defects) both returned HTTP 404. PrimrecRel represents the primitive-recursive matrix, including the permitted bounded quantifiers."
+}

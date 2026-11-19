@@ -1,0 +1,28 @@
+{
+  "source_sha256": "b7b69e1cc91cc4f9a9201a7da3a87e7615d5f4422f693d70d9679cd45b1c8c6a",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/CylinderGreatestFiniteOneDegree.olean",
+      "Proofs/CylinderGreatestFiniteOneDegree.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/CylinderGreatestFiniteOneDegree-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'CylinderGreatestFiniteOneDegree' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

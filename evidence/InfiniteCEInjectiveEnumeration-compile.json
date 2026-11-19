@@ -1,0 +1,28 @@
+{
+  "source_sha256": "be86080bef5b544b683382840aca5435d316bd50a2f0cf470ebd355d8f7cac01",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/InfiniteCEInjectiveEnumeration.olean",
+      "Proofs/InfiniteCEInjectiveEnumeration.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/InfiniteCEInjectiveEnumeration-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'InfiniteCEInjectiveEnumeration' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

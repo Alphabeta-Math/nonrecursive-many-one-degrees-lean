@@ -1,0 +1,2 @@
+import Proofs.AscendingSelfReductionFromPullbackReduction
+#print axioms AscendingSelfReductionFromPullbackReduction

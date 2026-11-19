@@ -1,0 +1,28 @@
+{
+  "source_sha256": "c54e1fbc2488f2650af1f6393760ed617ed9580387ac24c8d82f67ca2ccb3925",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/PriorityRequirements.olean",
+      "Proofs/PriorityRequirements.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/PriorityRequirements-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'PriorityRequirements' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

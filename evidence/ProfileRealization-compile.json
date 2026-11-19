@@ -1,0 +1,28 @@
+{
+  "source_sha256": "bb30605020cbdf4388043157edf62996fa93ab853cac9d88f2adacf6ed674b7b",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ProfileRealization.olean",
+      "Proofs/ProfileRealization.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ProfileRealization-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ProfileRealization' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

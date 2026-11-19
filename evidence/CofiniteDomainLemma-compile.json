@@ -1,0 +1,28 @@
+{
+  "source_sha256": "9d7aa737a5da02a40623219ba914317d526acbdf3682687d0d12c4fa27c7a028",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/CofiniteDomainLemma.olean",
+      "Proofs/CofiniteDomainLemma.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/CofiniteDomainLemma-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'CofiniteDomainLemma' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

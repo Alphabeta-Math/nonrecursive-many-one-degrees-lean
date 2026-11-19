@@ -1,0 +1,28 @@
+{
+  "source_sha256": "397c8c06048a65b868f09ed31b0b47c102e656752e7c9f6d23db9008269081b2",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ComplementCeDichotomy.olean",
+      "Proofs/ComplementCeDichotomy.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ComplementCeDichotomy-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ComplementCeDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

@@ -1,0 +1,28 @@
+{
+  "source_sha256": "a1a102aa158a724053837a0962220b96005dc4e1548f136724de48d0513bef29",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/RigidDegreeAntichain.olean",
+      "Proofs/RigidDegreeAntichain.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/RigidDegreeAntichain-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'RigidDegreeAntichain' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

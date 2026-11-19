@@ -1,0 +1,28 @@
+{
+  "source_sha256": "543b5a25a7a857b25bfbd52d661b964c9228d081d592609d1159626af1dfa6ae",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/NonrecursiveManyOneDegreeDichotomy.olean",
+      "Proofs/NonrecursiveManyOneDegreeDichotomy.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/NonrecursiveManyOneDegreeDichotomy-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'NonrecursiveManyOneDegreeDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

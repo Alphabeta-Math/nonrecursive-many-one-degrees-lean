@@ -1,0 +1,11 @@
+import Mathlib
+import Proofs.FiniteInjuryAndStabilization
+import Proofs.FiniteMarkerAvoidance
+import Proofs.CofiniteDomainLemma
+import Proofs.FixedStageRowStability
+import Proofs.ArithmeticalHierarchyLevels
+import Proofs.RelativeComputabilityAndEnumerability
+import Proofs.ComputablyEnumerableSet
+import Proofs.OracleNegativePullbackDecision
+
+set_option maxHeartbeats 2000000

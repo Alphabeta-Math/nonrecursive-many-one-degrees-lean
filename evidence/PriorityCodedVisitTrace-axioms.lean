@@ -1,0 +1,2 @@
+import Proofs.PriorityCodedVisitTrace
+#print axioms PriorityCodedVisitTrace

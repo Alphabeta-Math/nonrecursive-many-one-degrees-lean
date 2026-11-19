@@ -1,0 +1,28 @@
+{
+  "source_sha256": "4cc35c3ae47463256980d5863d2febbda810722f7d923384a083f2a3ca77ad53",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ComplementationOrderIsomorphism.olean",
+      "Proofs/ComplementationOrderIsomorphism.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ComplementationOrderIsomorphism-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ComplementationOrderIsomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

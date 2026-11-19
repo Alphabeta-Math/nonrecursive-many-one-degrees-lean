@@ -1,0 +1,28 @@
+{
+  "source_sha256": "1cf572dc3d1f31dc0aa05645f3224f3423549e310f6116ef9fb5f4306331579b",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/OracleNegativePullbackDecision.olean",
+      "Proofs/OracleNegativePullbackDecision.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/OracleNegativePullbackDecision-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": "Proofs/OracleNegativePullbackDecision.lean:502:22: warning: Unused tactic linter: `try` can be removed.\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nProofs/OracleNegativePullbackDecision.lean:1252:52: warning: Unused tactic linter: `try` can be removed.\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nProofs/OracleNegativePullbackDecision.lean:1259:65: warning: Unused tactic linter: `try` can be removed.\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n"
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'OracleNegativePullbackDecision' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

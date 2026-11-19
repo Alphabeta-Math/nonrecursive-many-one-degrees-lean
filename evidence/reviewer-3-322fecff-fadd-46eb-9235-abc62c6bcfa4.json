@@ -1,0 +1,995 @@
+{
+  "role": "reviewer-3",
+  "context": {
+    "input": {
+      "title": "Every Nonrecursive Many-One Degree Contains Either One or Infinitely Many Finite-One Degrees",
+      "request": "Resume the saved plan for Patrizio Cintioli's arXiv:2609.00419 at Step 3. Continue through Step 4 and local closeout under the native workflow, preserving all owner approval holds. The 15-page original arXiv v1 PDF was fetched and verified at /tmp/lean-arxiv-2609.00419.pdf and can be read using mutool draw -F txt. Check Alphabeta Math's shared library at /home/lazyinspirit/Projects/alphabetamath/items and Research Portal at /home/lazyinspirit/Projects/alphabetamath/research-portal as read-only sources. No matching article collection was found in the local Research Portal, and the anticipated article route in portal returned HTTP 404 at setup. Treat that URL only as a lookup location, verify each cited source, report the unavailable article-specific portal/defect report if still missing, and use null portal sources for results without a verified counterpart.",
+      "article": "https://arxiv.org/pdf/2609.00419",
+      "portal": "https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419",
+      "directory": "/home/lazyinspirit/Projects/nonrecursive-many-one-degrees-lean",
+      "github": "Alphabeta-Math/nonrecursive-many-one-degrees-lean",
+      "visibility": "private",
+      "lean": "leanprover/lean4:v4.36.0-rc2",
+      "mathlib": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+      "defectReport": "https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419/prerequisite-omissions-and-potential-defects"
+    },
+    "item": {
+      "id": "ManyOneReducibilityOnNat",
+      "title": "Computable many one reducibility interface",
+      "kind": "definition",
+      "main": false,
+      "article": null,
+      "portal": {
+        "statement": "For $A,B\\subseteq\\mathbb N$, write $A\\le_m B$ if a total computable $f:\\mathbb N\\to\\mathbb N$ satisfies\n$$\\forall n\\in\\mathbb N\\quad(n\\in A\\ \\Longleftrightarrow\\ f(n)\\in B).$$",
+        "locator": "Shared Math Library, def-computable-many-one-reducibility-interface, Definition (ordinary many-one reducibility on natural numbers)",
+        "url": "https://alphabetamath.cc/item/def-computable-many-one-reducibility-interface"
+      },
+      "deps": [],
+      "external": [
+        "ManyOneRelation"
+      ]
+    },
+    "plan": {
+      "items": [
+        {
+          "id": "ManyOneReducibilityOnNat",
+          "title": "Computable many one reducibility interface",
+          "kind": "definition",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "For $A,B\\subseteq\\mathbb N$, write $A\\le_m B$ if a total computable $f:\\mathbb N\\to\\mathbb N$ satisfies\n$$\\forall n\\in\\mathbb N\\quad(n\\in A\\ \\Longleftrightarrow\\ f(n)\\in B).$$",
+            "locator": "Shared Math Library, def-computable-many-one-reducibility-interface, Definition (ordinary many-one reducibility on natural numbers)",
+            "url": "https://alphabetamath.cc/item/def-computable-many-one-reducibility-interface"
+          },
+          "deps": [],
+          "external": [
+            "ManyOneRelation"
+          ]
+        },
+        {
+          "id": "ComputablyEnumerableSet",
+          "title": "Computably enumerable sets and languages",
+          "kind": "definition",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "Fix an effectively encoded set $X$.\n\nA subset $A\\subseteq X$ is **computably enumerable** when either $A=\\varnothing$\nor there exists a total computable function\n$$ e:\\mathbb N\\to X $$\nwhose range is exactly $A$.\n\nIf $L\\subseteq\\Sigma^*$ is a language over an alphabet $\\Sigma$, then $L$ is\n**computably enumerable** when it is c.e. as a subset of $\\Sigma^*$ under the\nchosen effective word encoding.",
+            "locator": "Shared Math Library, def-computably-enumerable-set, Definition",
+            "url": "https://alphabetamath.cc/item/def-computably-enumerable-set"
+          },
+          "deps": [],
+          "external": [
+            "RecEnumerablePredicate",
+            "EffectiveRangeEnumeration",
+            "ComputableRangeCE"
+          ]
+        },
+        {
+          "id": "InfiniteCEInjectiveEnumeration",
+          "title": "Infinite computably enumerable sets have computable injective enumerations",
+          "kind": "theorem",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "Every infinite computably enumerable subset of an effectively encoded set $X$ is\nthe range of a total computable injective function $\\mathbb N\\to X$.",
+            "locator": "Shared Math Library, thm-infinite-ce-sets-have-computable-injective-enumerations, Statement",
+            "url": "https://alphabetamath.cc/item/thm-infinite-ce-sets-have-computable-injective-enumerations"
+          },
+          "deps": [
+            "ComputablyEnumerableSet"
+          ],
+          "external": [
+            "InjectiveCEEnumeration"
+          ]
+        },
+        {
+          "id": "ArithmeticalHierarchyLevels",
+          "title": "The classes $\\Sigma_n^0$, $\\Pi_n^0$, and $\\Delta_n^0$",
+          "kind": "definition",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "For $n\\ge1$, a set $A\\subseteq\\mathbb N^k$ is **$\\Sigma_n^0$** when, for a\nprimitive-recursive predicate $R$, membership has a formula\n$$ \\vec x\\in A\\iff \\exists y_1\\forall y_2\\cdots Qy_n\\ R(\\vec x,\\vec y), $$\nwhere the quantifiers alternate and $Q$ is existential for odd $n$. It is\n**$\\Pi_n^0$** when its complement is $\\Sigma_n^0$, equivalently when the\ndisplay begins universally. Put\n$$ \\Delta_n^0:=\\Sigma_n^0\\cap\\Pi_n^0. $$\n\nBounded quantifiers in $R$ are allowed under the convention of\n[[def-bounded-arithmetic-formula]].",
+            "locator": "Shared Math Library, def-sigma-n-pi-n-and-delta-n-sets, Definition",
+            "url": "https://alphabetamath.cc/item/def-sigma-n-pi-n-and-delta-n-sets"
+          },
+          "deps": [],
+          "external": []
+        },
+        {
+          "id": "RelativeComputabilityAndEnumerability",
+          "title": "Relative computability and relative enumerability",
+          "kind": "definition",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "Fix the canonical binary numeral for each natural number (with zero encoded\nas $0$). For an oracle $X\\subseteq\\mathbb N$, an oracle program is a finite\ndeterministic machine program with ordinary transitions as in\n[[def-one-step-configuration-relation]], together with query instructions.\nA query instruction reads a finite binary numeral $q$ delimited on the tape\nand selects one of two specified successor states according as $q\\in X$ or\n$q\\notin X$; it leaves the tape and head unchanged. Malformed queries select\nthe negative successor. On input $n$, start in the initial state with its\nnumeral at the left end of an otherwise blank tape and the head at position\nzero. Iterate these transitions until an accepting or rejecting state is\nentered, if that ever happens.\n\nA set $A\\subseteq\\mathbb N$ is **$X$-computable** when some such program\nhalts on every numeral input and accepts exactly the members of $A$.\nIt is **$X$-c.e.** when some such program accepts exactly the members of $A$;\non nonmembers it may reject or run forever. Write $A\\le_T X$ for\n$X$-computability. A function $f:\\mathbb N\\to\\mathbb N$ is **total\n$X$-computable** when some such oracle program halts on every numeral input\n$n$ with the numeral of $f(n)$ as its delimited output.\n\nAn oracle program still makes finitely many transitions on any halting run;\nit does not read an infinite oracle at once.",
+            "locator": "Shared Math Library, def-relative-computability-and-enumerability, Definition",
+            "url": "https://alphabetamath.cc/item/def-relative-computability-and-enumerability"
+          },
+          "deps": [],
+          "external": [
+            "RelativizedTotalComputability",
+            "OracleCodeExistence"
+          ]
+        },
+        {
+          "id": "AcceptableNumbering",
+          "title": "Universal and acceptable numberings",
+          "kind": "definition",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "Let $(\\varphi_e)_{e\\in\\mathbb N}$ be a numbering of the partial computable\nfunctions.\n\nThe numbering is **universal** when the binary partial function\n$$ U(e,x)\\simeq\\varphi_e(x) $$\nis itself partial computable.\n\nThe numbering is **acceptable** when it is universal and there exists a total\ncomputable function\n$$ s:\\mathbb N^2\\to\\mathbb N $$\nsuch that for all $e,a,x\\in\\mathbb N$ one has\n$$ \\varphi_{s(e,a)}(x)\\simeq\\varphi_e(\\ulcorner a,x\\urcorner_{\\mathrm{seq}}), $$\nwhere $\\ulcorner a,x\\urcorner_{\\mathrm{seq}}$ is the chosen code of the\ntwo-term sequence $(a,x)$.",
+            "locator": "Shared Math Library, def-universal-and-acceptable-numbering, Definition",
+            "url": "https://alphabetamath.cc/item/def-universal-and-acceptable-numbering"
+          },
+          "deps": [],
+          "external": [
+            "UniversalEvaluator",
+            "PartialCodeSurjectivity",
+            "ParameterTheorem"
+          ]
+        },
+        {
+          "id": "HaltingSigmaOneCompleteness",
+          "title": "The halting set is $\\Sigma_1^0$-complete",
+          "kind": "theorem",
+          "main": false,
+          "article": null,
+          "portal": {
+            "statement": "For a fixed acceptable numbering, $K=\\{\\langle e,x\\rangle:\\varphi_e(x)\\downarrow\\}$\nis $\\Sigma_1^0$-complete.",
+            "locator": "Shared Math Library, thm-halting-is-sigma-one-complete, Statement",
+            "url": "https://alphabetamath.cc/item/thm-halting-is-sigma-one-complete"
+          },
+          "deps": [
+            "AcceptableNumbering",
+            "ArithmeticalHierarchyLevels"
+          ],
+          "external": [
+            "CEAsCodeDomain",
+            "ExistentialComputableCE"
+          ]
+        },
+        {
+          "id": "ReducibilityImplications",
+          "title": "One-one, finite-one, and many-one reducibility",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Finite-one reducibility is the restriction of many-one reducibility in which every fibre of the reducing function is finite. Thus, for all sets $X,Y$,\n\n$$X\\leq_1 Y \\Longrightarrow X\\leq_{\\mathrm{fo}}Y\\ \\Longrightarrow X\\leq_{\\mathrm{m}}Y.$$",
+            "locator": "§1, p. 1 (unnumbered)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=1"
+          },
+          "portal": null,
+          "deps": [
+            "ManyOneReducibilityOnNat"
+          ],
+          "external": [
+            "OneOneRelation",
+            "InjectiveFinitePreimage"
+          ]
+        },
+        {
+          "id": "RigidDegreeAntichain",
+          "title": "Infinite antichains in many-one degrees of m-rigid sets",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Earlier work established that, for almost every $A\\subseteq\\mathbb{N}$ with respect to the standard product measure on $2^\\mathbb{N}$, the degree $[A]_{\\mathrm{m}}$ contains an infinite antichain of finite-one degrees [1].\n\nEarlier work established that the many-one degree of every $m$-rigid set contains an infinite antichain of finite-one degrees [1]. Since the class of $m$-rigid sets has Lebesgue measure $1$ and is comeager, this gave an almost-sure and comeager negative answer to the question.",
+            "locator": "Abstract and §1, p. 1 (prior result [1])",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=1"
+          },
+          "portal": null,
+          "deps": [
+            "ManyOneReducibilityOnNat"
+          ],
+          "external": []
+        },
+        {
+          "id": "CylinderGreatestFiniteOneDegree",
+          "title": "The cylinder gives the greatest finite-one degree",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "For every set $A$, the cylinder\n\n$$\\operatorname{Cyl}(A)=\\{\\langle x,n\\rangle:x\\in A, n\\in\\mathbb{N}\\}$$\n\nbelongs to the same many-one degree as $A$, and $[\\operatorname{Cyl}(A)]_{\\mathrm{fo}}$ is the greatest finite-one degree in that many-one degree.",
+            "locator": "§1, p. 1 (unnumbered). See also §2, pp. 2–3, for the pairing and degree conventions.",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=1"
+          },
+          "portal": null,
+          "deps": [
+            "ReducibilityImplications"
+          ],
+          "external": [
+            "ComputablePairing",
+            "ComputableUnpairing",
+            "PairingEquivalence",
+            "ManyOneDegreeEquality",
+            "PreorderQuotient",
+            "PreorderQuotientOrder",
+            "FiniteFibresFinitePreimage"
+          ]
+        },
+        {
+          "id": "ComplementCeDichotomy",
+          "title": "Dichotomy for a nonrecursive degree with a co-c.e. representative",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Maslova proved that every nonrecursive computably enumerable (c.e.) many-one degree contains either exactly one or infinitely many finite-one degrees [2]. We shall also use the same conclusion when the complement of a representative is c.e., by passing to the complementary many-one degree and using complementation.",
+            "locator": "§1, p. 1 (unnumbered); applied in the proof of Corollary 7, p. 14",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=1"
+          },
+          "portal": null,
+          "deps": [
+            "MaslovaCeDichotomy",
+            "ComplementationOrderIsomorphism"
+          ],
+          "external": [
+            "ComputablePredComplement",
+            "RecursivePullsBack"
+          ]
+        },
+        {
+          "id": "ProfileRealization",
+          "title": "Profile realization",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "If $p:\\mathbb{N}\\to\\mathbb{N}$ is total computable, define its infinite-fibre profile by\n\n$$I_p=\\{y:|p^{-1}(y)|=\\infty\\}.$$\n\nA section of a map $p:\\mathbb{N}\\to\\mathbb{N}$ is a map $s:\\mathbb{N}\\to\\mathbb{N}$ such that\n\n$$p(s(y))=y \\qquad\\text{for every }y\\in\\mathbb{N}.$$\n\nThus a section is a right inverse of $p$.\n\nFor every $P\\in\\Pi^0_2$ there is a total computable surjection $p:\\mathbb{N}\\to\\mathbb{N}$ such that\n\n$$I_p=P.$$\n\nMoreover, $p$ has a computable section.",
+            "locator": "§2, Lemma 1, p. 3",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=3"
+          },
+          "portal": null,
+          "deps": [
+            "PiTwoDescendingCePresentation",
+            "ComputableInjectiveSection",
+            "InfiniteCEInjectiveEnumeration"
+          ],
+          "external": [
+            "ComputablePairing",
+            "ComputableUnpairing",
+            "PairingEquivalence",
+            "BoundedSearchComputable",
+            "ExistentialComputableCE"
+          ]
+        },
+        {
+          "id": "PiTwoDescendingCePresentation",
+          "title": "Descending uniformly c.e. presentation of the profile",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Choose a computable predicate $Q$ such that\n\n$$y\\in P \\iff \\forall j\\,\\exists s\\,Q(y,j,s).$$\n\nFor each $k\\in\\mathbb{N}$, let\n\n$$H_k= \\{y:\\forall j<k\\,\\exists s\\,Q(y,j,s)\\}.$$\n\nThe sequence $(H_k)_{k\\in\\mathbb{N}}$ is uniformly c.e., and\n\n$$\\mathbb{N}=H_0\\supseteq H_1\\supseteq H_2\\supseteq\\cdots.$$\n\nMoreover,\n\n$$P=\\bigcap_{k\\in\\mathbb{N}}H_k.$$",
+            "locator": "§2, proof of Lemma 1, p. 3 (unnumbered, under the Π⁰₂ hypothesis of Lemma 1)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=3"
+          },
+          "portal": null,
+          "deps": [
+            "ArithmeticalHierarchyLevels",
+            "ComputablyEnumerableSet"
+          ],
+          "external": [
+            "BoundedSearchComputable",
+            "ExistentialComputableCE"
+          ]
+        },
+        {
+          "id": "ComputableInjectiveSection",
+          "title": "Computable injective section of a computable surjection",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Finally, define\n\n$$s(y)=\\mu n\\,[p(n)=y].$$\n\nThe function $s$ is total computable because $p$ is computable and surjective, and\n\n$$p(s(y))=y$$\n\nfor every $y$. Thus $s$ is a computable section of $p$.\n\nMoreover, if $s(y)=s(z)$, then\n\n$$y=p(s(y))=p(s(z))=z.$$\n\nThus $s$ is injective.",
+            "locator": "§2, proof of Lemma 1, p. 4 (unnumbered)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=4"
+          },
+          "portal": null,
+          "deps": [],
+          "external": [
+            "LeastComputableWitness"
+          ]
+        },
+        {
+          "id": "FiniteMarkerAvoidance",
+          "title": "Finite-marker avoidance",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "A uniformly c.e. family $(V_x)_{x\\in\\mathbb{N}}$ is called $A$-homogeneous if\n\n$$z\\in V_x \\Longrightarrow A(z)=A(x).$$\n\nAssume that $A$ is not a cylinder and that neither $A$ nor $\\overline A$ is c.e. If $(V_x)_{x\\in\\mathbb{N}}$ is a uniformly c.e. $A$-homogeneous family, then for every finite $Z\\subseteq\\mathbb{N}$ there is $x$ such that\n\n$$V_x \\text{ is finite} \\qquad\\text{and}\\qquad V_x\\cap Z=\\varnothing.$$",
+            "locator": "§3, Lemma 2, p. 4",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=4"
+          },
+          "portal": null,
+          "deps": [
+            "InfiniteHomogeneousRows",
+            "ComputablyEnumerableSet"
+          ],
+          "external": [
+            "CEAsCodeDomain",
+            "UniformFiniteStageCodes",
+            "MonotoneCodeStages",
+            "CodeStageLimit",
+            "BoundedSearchComputable",
+            "ExistentialComputableCE"
+          ]
+        },
+        {
+          "id": "InfiniteHomogeneousRows",
+          "title": "Infinite homogeneous rows give a one-one reduction from the cylinder",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "We first record a general observation that will be used twice in the proof. Suppose that $(W_x)_{x\\in\\mathbb{N}}$ is a uniformly c.e. $A$-homogeneous family and that every $W_x$ is infinite.\n\nFix a computable enumeration without repetitions\n\n$$(x_0,n_0),(x_1,n_1),\\ldots$$\n\nof $\\mathbb{N}^2$. We construct a function\n\n$$G:\\mathbb{N}^2\\to\\mathbb{N}$$\n\nrecursively along this enumeration. When treating $(x_i,n_i)$, wait for an element of $W_{x_i}$ which has not been used at any earlier step, and define $G(x_i,n_i)$ to be the first such element found.\n\nSince $W_{x_i}$ is infinite and only finitely many values have been used before step $i$, this search terminates. Thus $G$ is a total computable injection satisfying\n\n$$G(x,n)\\in W_x$$\n\nfor all $x,n$. By the $A$-homogeneity of $(W_x)_{x\\in\\mathbb{N}}$,\n\n$$A(G(x,n))=A(x).$$\n\nConsequently, the map\n\n$$\\langle x,n\\rangle\\longmapsto G(x,n)$$\n\nwitnesses\n\n$$\\operatorname{Cyl}(A)\\leq_1 A.$$",
+            "locator": "§3, general observation in the proof of Lemma 2, pp. 4–5 (unnumbered)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=4"
+          },
+          "portal": null,
+          "deps": [
+            "ComputablyEnumerableSet"
+          ],
+          "external": [
+            "CEAsCodeDomain",
+            "UniformFiniteStageCodes",
+            "MonotoneCodeStages",
+            "CodeStageLimit",
+            "LeastComputableWitness",
+            "ComputableRecursion",
+            "ComputablePairing",
+            "ComputableUnpairing",
+            "PairingEquivalence"
+          ]
+        },
+        {
+          "id": "CofiniteDomainLemma",
+          "title": "Cofinite-domain lemma",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "A partial computable function $\\varphi$ is a partial ascending self-reduction of $A$ if, for every $x\\in\\operatorname{dom}\\varphi$,\n\n$$\\varphi(x)>x \\qquad\\text{and}\\qquad A(\\varphi(x))=A(x).$$\n\nAssume that $A$ is nonrecursive and is not a cylinder. If $\\varphi$ is a partial ascending self-reduction of $A$, then\n\n$$\\mathbb{N}\\setminus\\operatorname{dom}\\varphi$$\n\nis infinite.",
+            "locator": "§3, Lemma 4, p. 6 (partial ascending self-reduction convention in Definition 3, p. 6)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=6"
+          },
+          "portal": null,
+          "deps": [
+            "InfiniteHomogeneousRows"
+          ],
+          "external": [
+            "UnboundedInfiniteNatSet",
+            "ComputablePredComplement",
+            "PartialComputableConditional",
+            "ComputableRecursion",
+            "ComputableRangeCE"
+          ]
+        },
+        {
+          "id": "LocalInterpolation",
+          "title": "Local interpolation",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Assume that $A$ is nonrecursive, is not a cylinder, and neither $A$ nor $\\overline A$ is c.e. Then there is a set $C\\equiv_{\\mathrm{m}} A$ such that\n\n$$[A]_{\\mathrm{fo}}<[C]_{\\mathrm{fo}}<[\\operatorname{Cyl}(A)]_{\\mathrm{fo}}.$$",
+            "locator": "§4, Theorem 5, p. 8",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=8"
+          },
+          "portal": null,
+          "deps": [
+            "PriorityRequirements",
+            "ProfileRealization",
+            "PullbackReductions",
+            "HomogeneousRowsFromCylinderReduction",
+            "AscendingSelfReductionFromPullbackReduction",
+            "CylinderGreatestFiniteOneDegree"
+          ],
+          "external": [
+            "FiniteFibresFinitePreimage",
+            "PreorderQuotientOrder"
+          ]
+        },
+        {
+          "id": "PriorityRequirements",
+          "title": "A set c.e. in the halting problem meeting the upper and lower requirements",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Assume that $A$ is nonrecursive, is not a cylinder, and neither $A$ nor $\\overline A$ is c.e.\n\nFix an effective enumeration\n\n$$\\bigl((V_x^e)_{x\\in\\mathbb{N}}\\bigr)_{e\\in\\mathbb{N}}$$\n\nof all uniformly c.e. families, and an effective enumeration $(\\varphi_e)_{e\\in\\mathbb{N}}$ of all partial computable functions.\n\nFix standard finite stage approximations\n\n$$V^e_{x,0}\\subseteq V^e_{x,1}\\subseteq\\cdots, \\qquad V_x^e=\\bigcup_s V^e_{x,s},$$\n\nuniformly computable in $e,x,s$.\n\nWe construct a set $N$ which is c.e. in $0'$, satisfying the requirements\n\n$$\\mathcal U_e:\\quad (V_x^e)_x\\text{ is $A$-homogeneous} \\Longrightarrow \\exists x\\, [V_x^e\\text{ finite and }V_x^e\\subseteq N],$$\n\nand\n\n$$\\mathcal L_e:\\quad \\varphi_e\\text{ is a partial ascending self-reduction of }A \\Longrightarrow \\exists m\\, [m\\notin N\\cup\\operatorname{dom}\\varphi_e].$$\n\nUse the priority ordering\n\n$$\\mathcal U_0>\\mathcal L_0> \\mathcal U_1>\\mathcal L_1>\\cdots.$$\n\nThe construction does not attempt to decide whether either antecedent in the requirements holds. Its actions are independent of $A$. The hypotheses involving $A$ are used only in the verification: Lemma 2 is used to verify the $\\mathcal U_e$-requirements, while Lemma 4 is used to verify the $\\mathcal L_e$-requirements.\n\nTherefore every $\\mathcal U_e$ is satisfied.\n\nAt each stage only finitely many requirements are visited, each strategy performs only finitely many $0'$-decidable tests, and only a finite set is enumerated into $N$. Thus the enumeration of $N$ is computable in $0'$.\n\nLet\n\n$$P=\\mathbb{N}\\setminus N.$$\n\nSince $N$ is c.e. in $0'$, we have $N\\in\\Sigma^0_2$. Therefore $P=\\mathbb N\\setminus N$ belongs to $\\Pi^0_2$.",
+            "locator": "§4, proof of Theorem 5, pp. 8–10 (requirements on p. 8 and verification on pp. 9–10)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=8"
+          },
+          "portal": null,
+          "deps": [
+            "FiniteMarkerAvoidance",
+            "CofiniteDomainLemma",
+            "FixedStageRowStability",
+            "FiniteInjuryAndStabilization",
+            "RelativeComputabilityAndEnumerability",
+            "ArithmeticalHierarchyLevels",
+            "AcceptableNumbering"
+          ],
+          "external": [
+            "PartialCodeSurjectivity",
+            "CEAsCodeDomain",
+            "UniformFiniteStageCodes",
+            "MonotoneCodeStages",
+            "CodeStageLimit",
+            "OracleComputableRecursion",
+            "OracleCodeExistence",
+            "OracleStageEvaluationPrimitiveRecursive",
+            "OracleStageEventuallyCorrect",
+            "PersistentOracleStageSound",
+            "OracleFiniteStageConvergence",
+            "UnboundedInfiniteNatSet"
+          ]
+        },
+        {
+          "id": "FixedStageRowStability",
+          "title": "The halting problem decides row stability at a fixed stage",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Let $Z_e$ be the finite set of markers currently carried by higher-priority $\\mathcal L$-requirements. If $\\mathcal U_e$ has not yet acted, search among pairs $x,t\\leq s$ for one such that\n\n$$V^e_{x,t}\\cap Z_e=\\varnothing, \\qquad V^e_{x,t}\\subseteq\\{0,\\ldots,s\\},$$\n\nand\n\n$$\\forall r\\geq t\\, [V^e_{x,r}=V^e_{x,t}].$$\n\nThe last condition is decidable in $0'$. Indeed, for fixed $e,x,t$, failure of the stability condition is the $\\Sigma^0_1$ statement\n\n$$\\exists r\\geq t\\, [V^e_{x,r}\\neq V^e_{x,t}].$$\n\nHence $0'$ decides whether the row receives any new element after the specified stage $t$. Notice that this does not amount to deciding, with $0'$, whether an arbitrary c.e. row is finite.",
+            "locator": "§4, proof of Theorem 5, p. 8, Strategy for the upper requirement (unnumbered)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=8"
+          },
+          "portal": null,
+          "deps": [
+            "HaltingSigmaOneCompleteness",
+            "RelativeComputabilityAndEnumerability"
+          ],
+          "external": [
+            "UniformFiniteStageCodes",
+            "ExistentialComputableCE"
+          ]
+        },
+        {
+          "id": "FiniteInjuryAndStabilization",
+          "title": "Finite injury and stabilization of marker restraints",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Observe that an active marker carried by an $\\mathcal L_e$-strategy can be injured only by a higher-priority $\\mathcal U$-strategy. Indeed, a lower-priority $\\mathcal U$-strategy either had already acted when the marker was chosen, in which case its stabilized row was already contained in $N$ and hence could not contain the marker, or had not yet acted, in which case, as long as the marker remains active, it includes the marker among its restraints and therefore must choose a row disjoint from it.\n\nBy definition, once the $\\mathcal U_i$-strategy acts, it declares $\\mathcal U_i$ permanently satisfied and is never eligible to act again. Indeed, its chosen stabilized row is then entirely contained in $N$.\n\nThus every $\\mathcal U_i$ acts at most once. Hence, for every $e$, there is a stage $s_e$ after which no $\\mathcal U_i$ of higher priority than $\\mathcal L_e$ acts. By the preceding observation, $\\mathcal L_e$ cannot be injured after stage $s_e$.\n\nIf $\\mathcal L_e$ carries a marker at the end of stage $s_e$, that marker is final. Otherwise, either it chooses a marker at some later visit, in which case that marker is final, or it remains permanently markerless. Thus every $\\mathcal L_e$ eventually reaches a final state. Consequently, for every fixed requirement, the finite set of active markers carried by higher-priority $\\mathcal L$-strategies eventually stabilizes.",
+            "locator": "§4, proof of Theorem 5, p. 9, Verification (unnumbered)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=9"
+          },
+          "portal": null,
+          "deps": [],
+          "external": [
+            "FiniteInjuryByCause",
+            "FiniteInjuryStops"
+          ]
+        },
+        {
+          "id": "PullbackReductions",
+          "title": "Many-one equivalence and one-one reduction for the pullback",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "By Lemma 1, fix a total computable surjection $p$ with computable section such that\n\n$$I_p=P,$$\n\nand put\n\n$$C=p^{-1}(A).$$\n\nLet $s$ be a computable section of $p$. For every $y\\in\\mathbb{N}$,\n\n$$y\\in A \\quad\\Longleftrightarrow\\quad p(s(y))\\in A \\quad\\Longleftrightarrow\\quad s(y)\\in C.$$\n\nSince $s$ is injective, it witnesses\n\n$$A\\leq_1 C,$$\n\nand hence\n\n$$A\\leq_{\\mathrm{fo}}C.$$\n\nOn the other hand, for every $u\\in\\mathbb{N}$,\n\n$$u\\in C \\quad\\Longleftrightarrow\\quad p(u)\\in A,$$\n\nso $p$ witnesses\n\n$$C\\leq_{\\mathrm{m}}A.$$\n\nSince $A\\leq_1C$ implies $A\\leq_{\\mathrm{m}}C$, it follows that\n\n$$C\\equiv_{\\mathrm{m}}A.$$",
+            "locator": "§4, proof of Theorem 5, p. 11 (unnumbered)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=11"
+          },
+          "portal": null,
+          "deps": [
+            "ProfileRealization",
+            "ReducibilityImplications"
+          ],
+          "external": [
+            "ManyOneDegreeEquality"
+          ]
+        },
+        {
+          "id": "HomogeneousRowsFromCylinderReduction",
+          "title": "Homogeneous rows from a reduction of the cylinder",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "By Lemma 1, fix a total computable surjection $p$ with computable section such that\n\n$$I_p=P,$$\n\nand put\n\n$$C=p^{-1}(A).$$\n\nSuppose conversely that\n\n$$h:\\operatorname{Cyl}(A)\\leq_{\\mathrm{fo}} C.$$\n\nFor each $x$, define\n\n$$V_x=\\{p(h(\\langle x,n\\rangle)):n\\in\\mathbb{N}\\}.$$\n\nAlthough $p$ was chosen only after the construction of $N$, there is no circularity here. Once $p$ and the hypothetical reduction $h$ are fixed, $(V_x)_{x\\in\\mathbb{N}}$ is an ordinary uniformly c.e. family. Consequently, there is an index $e$ such that\n\n$$V_x=V_x^e \\qquad\\text{for every }x.$$\n\nThis family is $A$-homogeneous. Indeed, if\n\n$$y=p(h(\\langle x,n\\rangle)),$$\n\nthen\n\n$$y\\in A \\iff h(\\langle x,n\\rangle)\\in C \\iff \\langle x,n\\rangle\\in\\operatorname{Cyl}(A) \\iff x\\in A.$$",
+            "locator": "§4, proof of Theorem 5, p. 11 (unnumbered); C and p are defined earlier on p. 11",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=11"
+          },
+          "portal": null,
+          "deps": [
+            "ProfileRealization",
+            "ComputablyEnumerableSet"
+          ],
+          "external": [
+            "ComputablePairing",
+            "ComputableRangeCE"
+          ]
+        },
+        {
+          "id": "AscendingSelfReductionFromPullbackReduction",
+          "title": "Ascending self-reduction from a finite-one reduction of the pullback",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "By Lemma 1, fix a total computable surjection $p$ with computable section such that\n\n$$I_p=P,$$\n\nand put\n\n$$C=p^{-1}(A).$$\n\nSuppose, toward a contradiction, that\n\n$$h:C\\leq_{\\mathrm{fo}}A.$$\n\nDefine the partial computable function $f_h$ by\n\n$$f_h(y)=h(u),$$\n\nwhere $u$ is the least number such that\n\n$$p(u)=y \\qquad\\text{and}\\qquad h(u)>y.$$\n\nWhenever $f_h(y)$ is defined,\n\n$$f_h(y)>y$$\n\nand, because $h$ is a reduction,\n\n$$A(f_h(y)) =A(h(u)) =A(p(u)) =A(y).$$\n\nThus $f_h$ is a partial ascending self-reduction of $A$.\n\nIf $y\\in P$, then $p^{-1}(y)$ is infinite. Since $h$ is finite-one,\n\n$$h^{-1}(\\{0,\\ldots,y\\}) = \\bigcup_{z\\leq y}h^{-1}(z)$$\n\nis finite. Hence some $u\\in p^{-1}(y)$ satisfies $h(u)>y$, and so\n\n$$P\\subseteq\\operatorname{dom} f_h.$$",
+            "locator": "§4, proof of Theorem 5, pp. 11–12 (p. 11 defines p and C, p. 12 states the result)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=12"
+          },
+          "portal": null,
+          "deps": [
+            "ProfileRealization"
+          ],
+          "external": [
+            "PartialComputableSearch",
+            "PartialSearchDomain",
+            "FiniteFibresFinitePreimage"
+          ]
+        },
+        {
+          "id": "PriorityConstructionEffectiveness",
+          "title": "Effectiveness of the priority construction",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Several points concerning the effectiveness of the construction are worth emphasizing.\n\nFirst, for a partial computable function $\\varphi_e$, the condition\n\n$$m\\notin\\operatorname{dom}\\varphi_e$$\n\nis decidable in $0'$. Thus an $\\mathcal L_e$-strategy can choose a marker with permanent certification that it lies outside $\\operatorname{dom}\\varphi_e$.\n\nSecond, a $\\mathcal U$-requirement acting at stage $s$ enumerates into $N$ only numbers at most $s$. Consequently, no action before stage $m$ can enumerate $m$ into $N$. Once the higher-priority $\\mathcal U$-requirements have ceased acting, a newly chosen marker is also protected from every lower-priority $\\mathcal U$-requirement. One which has already acted selected a row already contained in $N$; since the marker is chosen outside the current content of $N$, that row cannot contain it. One which has not yet acted includes the marker among its restraints and therefore selects a row disjoint from it.\n\nFinally, the finite parameters hardcoded in the proofs of Lemmas 2 and 4 need not be recovered by the priority construction. For a $\\mathcal U_e$-requirement, the current finite restraint set $Z_e$ is explicitly available at every stage. Once it stabilizes, Lemma 2 guarantees the existence of a finite row disjoint from it, and the bounded $0'$-search eventually finds a stabilization pair $(x,t)$ without having to recognize that the restraints have stabilized. For an $\\mathcal L_e$-requirement, Lemma 4 is used only to guarantee arbitrarily large elements of\n\n$$\\mathbb{N}\\setminus\\operatorname{dom}\\varphi_e,$$\n\nwhile each individual candidate is checked by the $0'$-test described above. Thus the two lemmas are used only existentially in the verification, and no uniform computation of the finite parameters appearing in their proofs is required.",
+            "locator": "§4, Remark 6, p. 13",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=13"
+          },
+          "portal": null,
+          "deps": [
+            "PriorityRequirements"
+          ],
+          "external": [
+            "PartialCodeSurjectivity",
+            "OracleComputableRecursion"
+          ]
+        },
+        {
+          "id": "MaslovaCeDichotomy",
+          "title": "Maslova's dichotomy for nonrecursive c.e. many-one degrees",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "We use the following consequence of Maslova's theorem [2], in the formulation recorded by Richter, Stephan, and Zhang [6, p. 17]: every nonrecursive c.e. many-one degree contains either exactly one or infinitely many finite-one degrees.",
+            "locator": "§5, p. 13 (unnumbered, consequence of [2] as stated in [6, p. 17]); also §1, p. 1",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=13"
+          },
+          "portal": null,
+          "deps": [
+            "ManyOneReducibilityOnNat",
+            "ComputablyEnumerableSet"
+          ],
+          "external": []
+        },
+        {
+          "id": "NonrecursiveManyOneDegreeDichotomy",
+          "title": "Dichotomy for nonrecursive many-one degrees",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "Every nonrecursive many-one degree contains either exactly one or infinitely many finite-one degrees. In particular, there is no nonrecursive many-one degree containing at least two but only finitely many finite-one degrees.",
+            "locator": "§5, Corollary 7, p. 13",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=13"
+          },
+          "portal": null,
+          "deps": [
+            "CylinderGreatestFiniteOneDegree",
+            "ComplementCeDichotomy",
+            "MaslovaCeDichotomy",
+            "LocalInterpolation"
+          ],
+          "external": [
+            "FiniteSetMaximal",
+            "ManyOneDegreeRepresentative",
+            "ManyOneDegreeEquality",
+            "RecursivePullsBack"
+          ]
+        },
+        {
+          "id": "ComplementationOrderIsomorphism",
+          "title": "Complementation induces an order isomorphism",
+          "kind": "theorem",
+          "main": true,
+          "article": {
+            "statement": "For a many-one degree $\\mathbf d$, let\n\n$$\\mathcal F(\\mathbf d) = \\{[X]_{\\mathrm{fo}}:X\\in\\mathbf d\\}.$$\n\nSuppose next that $\\overline A$ is c.e. Put\n\n$$\\mathbf d^{\\,c}=[\\overline A]_{\\mathrm{m}}.$$\n\nComplementation induces an order isomorphism\n\n$$\\Phi:\\mathcal F(\\mathbf d)\\longrightarrow \\mathcal F(\\mathbf d^{\\,c})$$\n\ngiven by\n\n$$\\Phi([X]_{\\mathrm{fo}})=[\\overline X]_{\\mathrm{fo}}.$$\n\nIndeed, for every total computable function $f$,\n\n$$f:X\\leq_{\\mathrm{m}}Y \\quad\\Longleftrightarrow\\quad f:\\overline X\\leq_{\\mathrm{m}}\\overline Y,$$\n\nand, since the fibres of $f$ are unchanged,\n\n$$f:X\\leq_{\\mathrm{fo}}Y \\quad\\Longleftrightarrow\\quad f:\\overline X\\leq_{\\mathrm{fo}}\\overline Y.$$\n\nThus $\\Phi$ is well defined and order preserving. The same complementation map, now considered from $\\mathcal F(\\mathbf d^{\\,c})$ to $\\mathcal F(\\mathbf d)$, is the inverse of $\\Phi$. Hence $\\Phi$ is an order isomorphism.",
+            "locator": "§5, proof of Corollary 7, pp. 13–14 (notation on p. 13, isomorphism on p. 14)",
+            "url": "https://arxiv.org/pdf/2609.00419v1#page=14"
+          },
+          "portal": null,
+          "deps": [
+            "ReducibilityImplications"
+          ],
+          "external": [
+            "ManyOneDegreeEquality",
+            "PreorderQuotientOrder"
+          ]
+        }
+      ],
+      "external": [
+        {
+          "id": "ManyOneRelation",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "ManyOneReducible",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Reduce.lean#L41",
+          "usage": "Direct. Use the existential computable witness and pointwise membership equivalence for predicates on Nat. Its Lean notation is ≤₀, corresponding to the article's ≤ₘ. Import `Mathlib.Computability.Reduce`. Checked Lean signature\nManyOneReducible.{u_1, u_2} {α : Type u_1} {β : Type u_2} [Primcodable α] [Primcodable β] (p : α → Prop)\n  (q : β → Prop) : Prop Definition from source\ndef ManyOneReducible {α β} [Primcodable α] [Primcodable β] (p : α → Prop) (q : β → Prop) :=\n  ∃ f, Computable f ∧ ∀ a, p a ↔ q (f a)"
+        },
+        {
+          "id": "OneOneRelation",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "OneOneReducible",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Reduce.lean#L72",
+          "usage": "Direct. This is the computable, injective reduction relation. Pass its witness to the finite-preimage construction and then forget the finite-fibre condition for many-one reducibility. Import `Mathlib.Computability.Reduce`. Checked Lean signature\nOneOneReducible.{u_1, u_2} {α : Type u_1} {β : Type u_2} [Primcodable α] [Primcodable β] (p : α → Prop) (q : β → Prop) :\n  Prop Definition from source\ndef OneOneReducible {α β} [Primcodable α] [Primcodable β] (p : α → Prop) (q : β → Prop) :=\n  ∃ f, Computable f ∧ Injective f ∧ ∀ a, p a ↔ q (f a)"
+        },
+        {
+          "id": "ManyOneDegreeEquality",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "ManyOneDegree.of_eq_of",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Reduce.lean#L352",
+          "usage": "Direct. Instantiate both types with Nat, using the supplied Primcodable and Inhabited instances, to identify arithmetic representatives of one many-one degree and descend the forgetful map from finite-one degrees. Import `Mathlib.Computability.Reduce`. Checked Lean signature\nManyOneDegree.of_eq_of.{u, v} {α : Type u} [Primcodable α] [Inhabited α] {β : Type v} [Primcodable β] [Inhabited β]\n  {p : Set α} {q : Set β} :\n  ManyOneDegree.of p = ManyOneDegree.of q ↔ ManyOneEquiv (fun (x : α) => x ∈ p) fun (x : β) => x ∈ q"
+        },
+        {
+          "id": "ManyOneDegreeRepresentative",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "ManyOneDegree.ind_on",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Reduce.lean#L317",
+          "usage": "Direct. Eliminate an arbitrary many-one degree using representatives that are subsets of Nat. This supplies a representative without a finite-type restriction. Import `Mathlib.Computability.Reduce`. Checked Lean signature\nManyOneDegree.ind_on {C : ManyOneDegree → Prop} (d : ManyOneDegree) (h : ∀ (p : Set ℕ), C (ManyOneDegree.of p)) : C d"
+        },
+        {
+          "id": "RecursivePullsBack",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "ComputablePred.computable_of_manyOneReducible",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Reduce.lean#L117",
+          "usage": "Direct. Transport computability of a representative backwards along a many-one reduction, so recursive status is invariant within the degree. Import `Mathlib.Computability.Reduce`. Checked Lean signature\nComputablePred.computable_of_manyOneReducible.{u_1, u_2} {α : Type u_1} {β : Type u_2} [Primcodable α] [Primcodable β]\n  {p : α → Prop} {q : β → Prop} (h₁ : p ≤₀ q) (h₂ : ComputablePred q) : ComputablePred p"
+        },
+        {
+          "id": "ComputablePredComplement",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "ComputablePred.not",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/RE.lean#L201",
+          "usage": "Direct. Complement a computable predicate, both to transfer nonrecursiveness by involution and to show nonrecursive colour classes cannot be finite. Import `Mathlib.Computability.RE`. Checked Lean signature\nComputablePred.not.{u_1} {α : Type u_1} [Primcodable α] {p : α → Prop} (hp : ComputablePred p) :\n  ComputablePred fun (a : α) => ¬p a"
+        },
+        {
+          "id": "RecEnumerablePredicate",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "REPred",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/RE.lean#L157",
+          "usage": "Direct. Use the partial-recursive semidecision predicate as the Lean c.e. interface. Compare its range characterization with the Alphabeta definition using the Tau Ceti range results and handle the empty case separately. Import `Mathlib.Computability.RE`. Checked Lean signature\nREPred.{u_1} {α : Type u_1} [Primcodable α] (p : α → Prop) : Prop Definition from source\ndef REPred {α} [Primcodable α] (p : α → Prop) :=\n  Partrec fun a => Part.assert (p a) fun _ => Part.some ()"
+        },
+        {
+          "id": "LeastComputableWitness",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Computable.find",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/RE.lean#L178",
+          "usage": "Direct. Use a decidable computable relation and a proof of a witness for every parameter. The relation is p(n)=y for a section, and a coded fresh-element stage witness in the greedy cylinder construction. Import `Mathlib.Computability.RE`. Checked Lean signature\nComputable.find.{u_1} {α : Type u_1} [Primcodable α] {P : α → ℕ → Prop} [DecidableRel P]\n  (hP_comp : ComputablePred fun (p : α × ℕ) => P (Prod.fst p) (Prod.snd p)) (hP_ex : ∀ (x : α), ∃ (n : ℕ), P x n) :\n  Computable fun (x : α) => Nat.find (hP_ex x)"
+        },
+        {
+          "id": "PartialComputableSearch",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Partrec.rfind",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Partrec.lean#L499",
+          "usage": "Direct. Use partial minimization with the lifted total Boolean test p(u)=y and y<h(u). Map the result through h only on convergence. Import `Mathlib.Computability.Partrec`. Checked Lean signature\nPartrec.rfind.{u_1} {α : Type u_1} [Primcodable α] {p : α → ℕ →. Bool} (hp : Partrec₂ p) :\n  Partrec fun (a : α) => Nat.rfind (p a)"
+        },
+        {
+          "id": "PartialSearchDomain",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Nat.rfind_dom",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Partrec.lean#L97",
+          "usage": "Direct. The smaller-input domain premise holds because the test for a pullback reduction is total. This identifies the search domain with existence of an admissible preimage. Import `Mathlib.Computability.Partrec`. Checked Lean signature\nNat.rfind_dom {p : ℕ →. Bool} : Part.Dom (Nat.rfind p) ↔ ∃ (n : ℕ), true ∈ p n ∧ ∀ {m : ℕ}, m < n → Part.Dom (p m)"
+        },
+        {
+          "id": "ComputableRecursion",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Computable.nat_rec",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Partrec.lean#L591",
+          "usage": "Direct. Implement the list of earlier choices in the injective cylinder construction and the iterates of a total increasing map. Use only the encoded state and a computable step. Import `Mathlib.Computability.Partrec`. Checked Lean signature\nComputable.nat_rec.{u_1, u_4} {α : Type u_1} {σ : Type u_4} [Primcodable α] [Primcodable σ] {f : α → ℕ} {g : α → σ}\n  {h : α → ℕ × σ → σ} (hf : Computable f) (hg : Computable g) (hh : Computable₂ h) :\n  Computable fun (a : α) => Nat.rec (g a) (fun (y : ℕ) (IH : σ) => h a (y, IH)) (f a)"
+        },
+        {
+          "id": "PartialComputableConditional",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Partrec.cond",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/RE.lean#L110",
+          "usage": "Direct. Select between a finite hardcoded replacement table and a partial computable map using computable finite-table membership. Totality of the resulting composite follows from the repaired domain. Import `Mathlib.Computability.RE`. Checked Lean signature\nPartrec.cond.{u_1, u_4} {α : Type u_1} {σ : Type u_4} [Primcodable α] [Primcodable σ] {c : α → Bool} {f g : α →. σ}\n  (hc : Computable c) (hf : Partrec f) (hg : Partrec g) : Partrec fun (a : α) => bif c a then f a else g a"
+        },
+        {
+          "id": "ComputablePairing",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Primrec₂.natPair",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Primrec/Basic.lean#L365",
+          "usage": "Direct. Use the two-argument primitive recursive Nat.pair as a computable function via Primrec₂.to_comp. Import `Mathlib.Computability.Primrec.Basic`. Checked Lean signature\nPrimrec₂.natPair : Primrec₂ Nat.pair"
+        },
+        {
+          "id": "ComputableUnpairing",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Primrec.unpair",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/Primrec/Basic.lean#L312",
+          "usage": "Direct. Use the primitive recursive inverse and computable projections for cylinder and profile witnesses and for decoding finite search witnesses. Import `Mathlib.Computability.Primrec.Basic`. Checked Lean signature\nPrimrec.unpair : Primrec Nat.unpair"
+        },
+        {
+          "id": "PairingEquivalence",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Nat.pairEquiv",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Data/Nat/Pairing.lean#L73",
+          "usage": "Direct. Supply bijective coding of Nat × Nat, using the injectivity of the pairing map and of each fixed first-coordinate column. Import `Mathlib.Data.Nat.Pairing`. Checked Lean signature\nNat.pairEquiv : ℕ × ℕ ≃ ℕ"
+        },
+        {
+          "id": "InjectiveFinitePreimage",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Set.Finite.preimage",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Data/Set/Finite/Basic.lean#L608",
+          "usage": "Direct. Instantiate with a singleton target set. Global injectivity supplies the exact InjOn premise on that preimage. Import `Mathlib.Data.Set.Finite.Basic`. Checked Lean signature\nSet.Finite.preimage.{u, v} {α : Type u} {β : Type v} {f : α → β} {s : Set β} (I : Set.InjOn f (f ⁻¹' s))\n  (h : Set.Finite s) : Set.Finite (f ⁻¹' s)"
+        },
+        {
+          "id": "FiniteFibresFinitePreimage",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Set.Finite.preimage'",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Data/Set/Finite/Lattice.lean#L213",
+          "usage": "Direct. Reuse for closure under composition, the finite image obstruction to a cylinder reduction, and the finite pullback of {0,…,y}. The lemma assumes finite fibres only above the specified finite target set and works on arbitrary types. Import `Mathlib.Data.Set.Finite.Lattice`. Checked Lean signature\nSet.Finite.preimage'.{u, v} {α : Type u} {β : Type v} {f : α → β} {s : Set β} (h : Set.Finite s)\n  (hf : ∀ b ∈ s, Set.Finite (f ⁻¹' {b})) : Set.Finite (f ⁻¹' s)\n'Set.Finite.preimage'' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        },
+        {
+          "id": "UnboundedInfiniteNatSet",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Set.Infinite.exists_gt",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Order/Interval/Finset/Basic.lean#L930",
+          "usage": "Direct. Nat satisfies the linear order and lower locally finite order hypotheses. Choose an element above any finite marker or stage bound, and choose a later point of a given infinite colour. Import `Mathlib.Order.Interval.Finset.Basic`. Checked Lean signature\nSet.Infinite.exists_gt.{u_2} {α : Type u_2} [LinearOrder α] [LocallyFiniteOrderBot α] {s : Set α} (hs : Set.Infinite s)\n  (a : α) : ∃ b ∈ s, a < b"
+        },
+        {
+          "id": "FiniteSetMaximal",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Set.Finite.exists_maximal",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Order/Preorder/Finite.lean#L75",
+          "usage": "Direct. Apply to the finite nonempty set of degrees after removing its greatest element. The ambient type may be infinite. Maximality and the greatest element give the required cover. Import `Mathlib.Order.Preorder.Finite`. Checked Lean signature\nSet.Finite.exists_maximal.{u_2} {α : Type u_2} [LE α] [IsTrans α LE.le] {s : Set α} (h : Set.Finite s)\n  (hs : Set.Nonempty s) : ∃ (i : α), Maximal (fun (x : α) => x ∈ s) i"
+        },
+        {
+          "id": "PreorderQuotient",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Antisymmetrization",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Order/Antisymmetrization.lean#L124",
+          "usage": "Direct. After proving the finite-one relation is a preorder, use its antisymmetrization for finite-one degrees. The article's many-one degrees already have a dedicated mathlib quotient. Import `Mathlib.Order.Antisymmetrization`. Checked Lean signature\nAntisymmetrization.{u_1} (α : Type u_1) (r : α → α → Prop) [IsPreorder α r] : Type u_1 Definition from source\ndef Antisymmetrization : Type _ :=\n  Quotient <| AntisymmRel.setoid α r"
+        },
+        {
+          "id": "PreorderQuotientOrder",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "toAntisymmetrization_le_toAntisymmetrization_iff",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Order/Antisymmetrization.lean#L314",
+          "usage": "Direct. Transfer comparisons between representatives to and from the finite-one degree order. Combine with the definition of strict order to obtain the article's strict inequalities. Import `Mathlib.Order.Antisymmetrization`. Checked Lean signature\ntoAntisymmetrization_le_toAntisymmetrization_iff.{u_1} {α : Type u_1} {a b : α} [Preorder α] :\n  toAntisymmetrization (fun (x1 x2 : α) => x1 ≤ x2) a ≤ toAntisymmetrization (fun (x1 x2 : α) => x1 ≤ x2) b ↔ a ≤ b"
+        },
+        {
+          "id": "UniversalEvaluator",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Nat.Partrec.Code.eval_part",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/PartrecCode.lean#L1011",
+          "usage": "Direct. The evaluator is partial computable jointly in the code and input. Use it in the standard acceptable numbering and convert to a natural index with the denumerable code representation. Import `Mathlib.Computability.PartrecCode`. Checked Lean signature\nNat.Partrec.Code.eval_part : Partrec₂ Nat.Partrec.Code.eval"
+        },
+        {
+          "id": "ParameterTheorem",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Nat.Partrec.Code.smn",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/PartrecCode.lean#L523",
+          "usage": "Direct. Specialize the checked universal coding to hardwire a natural parameter. Combine with denumerable codes to get the parameter function on natural indices. Import `Mathlib.Computability.PartrecCode`. Checked Lean signature\nNat.Partrec.Code.smn :\n  ∃ (f : Nat.Partrec.Code → ℕ → Nat.Partrec.Code),\n    Computable₂ f ∧\n      ∀ (c : Nat.Partrec.Code) (n x : ℕ), Nat.Partrec.Code.eval (f c n) x = Nat.Partrec.Code.eval c (Nat.pair n x)"
+        },
+        {
+          "id": "PartialCodeSurjectivity",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "Nat.Partrec.Code.exists_code",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/PartrecCode.lean#L530",
+          "usage": "Direct. After converting Partrec to Nat.Partrec for natural inputs and outputs, get a code for each partial map, including the lower requirements' maps and the nonconvergence tests. Import `Mathlib.Computability.PartrecCode`. Checked Lean signature\nNat.Partrec.Code.exists_code {f : ℕ →. ℕ} : Nat.Partrec f ↔ ∃ (c : Nat.Partrec.Code), Nat.Partrec.Code.eval c = f"
+        },
+        {
+          "id": "RelativizedTotalComputability",
+          "repository": "https://github.com/leanprover-community/mathlib4",
+          "revision": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
+          "license": "Apache-2.0",
+          "declaration": "ComputableIn",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9/Mathlib/Computability/RecursiveIn.lean#L97",
+          "usage": "Direct. Model the article's single total characteristic oracle as a singleton set of partial functions whose sole member is the total lift. Use ComputableIn for total functions and its underlying RecursiveIn for semideciders. Import `Mathlib.Computability.RecursiveIn`. Checked Lean signature\nComputableIn.{u_4, u_5} {α : Type u_4} {σ : Type u_5} [Primcodable α] [Primcodable σ] (O : Set (ℕ →. ℕ)) (f : α → σ) :\n  Prop Definition from source\ndef ComputableIn {α σ} [Primcodable α] [Primcodable σ] (O : Set (ℕ →. ℕ)) (f : α → σ) : Prop :=\n  RecursiveIn O (fun a => Part.some (f a))"
+        },
+        {
+          "id": "EffectiveRangeEnumeration",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "REPred.exists_computable_range",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Enumeration/Range.lean#L36",
+          "usage": "Direct for Primcodable carriers. The Nonempty premise belongs to the total enumeration case. Use the empty alternative in the Alphabeta definition separately. Import `TauCeti.Computability.Enumeration.Range`. Checked Lean signature\nREPred.exists_computable_range.{u_1} {α : Type u_1} [Primcodable α] {S : Set α} (hS : REPred fun (x : α) => x ∈ S)\n  (hne : Set.Nonempty S) : ∃ (f : ℕ → α), Computable f ∧ Set.range f = S"
+        },
+        {
+          "id": "InjectiveCEEnumeration",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "REPred.exists_injective_computable_range",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Enumeration/Range.lean#L174",
+          "usage": "Direct on Nat and on explicitly Primcodable carriers. Both REPred and Set.Infinite are required. It supplies precisely the injective total enumeration of R for profile realization and has no finite-carrier hypothesis. Import `TauCeti.Computability.Enumeration.Range`. Checked Lean signature\nREPred.exists_injective_computable_range.{u_1} {α : Type u_1} [Primcodable α] {S : Set α}\n  (hS : REPred fun (x : α) => x ∈ S) (h : Set.Infinite S) :\n  ∃ (f : ℕ → α), Computable f ∧ Function.Injective f ∧ Set.range f = S"
+        },
+        {
+          "id": "ComputableRangeCE",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "Computable.rePred_mem_range",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/RE.lean#L89",
+          "usage": "Direct. For uniform rows take the range of the computable map on (x,n) returning (x,g(x,n)). This also gives c.e. orbits and the range-to-predicate part of the shared c.e. interface. Import `TauCeti.Computability.RE`. Checked Lean signature\nComputable.rePred_mem_range.{u_1, u_2} {α : Type u_1} [Primcodable α] {β : Type u_2} [Primcodable β] {f : α → β}\n  (hf : Computable f) : REPred fun (x : β) => x ∈ Set.range f"
+        },
+        {
+          "id": "BoundedSearchComputable",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "ComputablePred.exists_lt",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/RE.lean#L56",
+          "usage": "Direct. Use negation for bounded universal checks and a common stage bound on finitely many search witnesses. The input relation must already be computable as a predicate jointly in the parameter and witness. Import `TauCeti.Computability.RE`. Checked Lean signature\nComputablePred.exists_lt.{u_1} {α : Type u_1} [Primcodable α] {p : α → ℕ → Prop}\n  (hp : ComputablePred fun (x : α × ℕ) => p (Prod.fst x) (Prod.snd x)) :\n  ComputablePred fun (x : α × ℕ) => ∃ y < Prod.snd x, p (Prod.fst x) y"
+        },
+        {
+          "id": "ExistentialComputableCE",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "ComputablePred.rePred_exists",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/RE.lean#L75",
+          "usage": "Direct. Turn an unbounded natural witness with a uniformly computable test into a c.e. predicate. Use for the descending presentation, the coded set R, finite-row combinations and finding a later change in a fixed row. Import `TauCeti.Computability.RE`. Checked Lean signature\nComputablePred.rePred_exists.{u_1} {α : Type u_1} [Primcodable α] {p : α → ℕ → Prop}\n  (hp : ComputablePred fun (x : α × ℕ) => p (Prod.fst x) (Prod.snd x)) : REPred fun (a : α) => ∃ (n : ℕ), p a n"
+        },
+        {
+          "id": "CEAsCodeDomain",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Enumeration.rePred_iff_exists_code",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Enumeration/Domain.lean#L47",
+          "usage": "Direct on Nat. Use it on coded pairs to index all uniformly c.e. families and on the c.e. halting predicate to obtain a domain code. Its reverse direction provides c.e. membership from a domain characterization. Import `TauCeti.Computability.Enumeration.Domain`. Checked Lean signature\nTauCeti.Enumeration.rePred_iff_exists_code {p : ℕ → Prop} :\n  REPred p ↔ ∃ (c : Nat.Partrec.Code), ∀ (x : ℕ), p x ↔ Part.Dom (Nat.Partrec.Code.eval c x)"
+        },
+        {
+          "id": "UniformFiniteStageCodes",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "Nat.Partrec.Code.primrec_domStage",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Enumeration/Code.lean#L132",
+          "usage": "Adaptation. Reuse the primitive recursive binary code of a single program's finite domain stage. For rows of a c.e. relation on pairs, decode the stage set and filter on the first coordinate. Comparing coded finite row sets gives a computable stability test for specified e,x,t,r. Import `TauCeti.Computability.Enumeration.Code`. Checked Lean signature\nNat.Partrec.Code.primrec_domStage :\n  Primrec fun (p : Nat.Partrec.Code × ℕ) =>\n    (Equiv.symm Finset.equivBitIndices) (Nat.Partrec.Code.domStage (Prod.fst p) (Prod.snd p))"
+        },
+        {
+          "id": "MonotoneCodeStages",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "Nat.Partrec.Code.monotone_domStage",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Enumeration/Code.lean#L91",
+          "usage": "Direct for a code's domain stages. Restriction to a fixed row preserves monotonicity, and the halting-oracle approximation also uses monotone domain stages. Import `TauCeti.Computability.Enumeration.Code`. Checked Lean signature\nNat.Partrec.Code.monotone_domStage (c : Nat.Partrec.Code) : Monotone (Nat.Partrec.Code.domStage c)"
+        },
+        {
+          "id": "CodeStageLimit",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "Nat.Partrec.Code.stageLimit_domStage",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Enumeration/Code.lean#L98",
+          "usage": "Direct for each code. Identify the union of stages with the code's domain, then take paired sections for uniform rows. This also identifies the limiting halting set used as the oracle. Import `TauCeti.Computability.Enumeration.Code`. Checked Lean signature\nNat.Partrec.Code.stageLimit_domStage (c : Nat.Partrec.Code) :\n  TauCeti.Enumeration.stageLimit (Nat.Partrec.Code.domStage c) = {x : ℕ | Part.Dom (Nat.Partrec.Code.eval c x)}"
+        },
+        {
+          "id": "OracleCodeExistence",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Oracle.Single.Code.exists_code",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/SingleOracle/Code.lean#L450",
+          "usage": "Direct for a singleton oracle and Nat-to-Nat partial functions. Use the total characteristic lift as O, converting between the typed and Nat interfaces as needed. A stage enumeration's output test can be represented by a partial semidecider in this model. Import `TauCeti.Computability.SingleOracle.Code`. Checked Lean signature\nTauCeti.Oracle.Single.Code.exists_code {O f : ℕ →. ℕ} :\n  Nat.RecursiveIn {O} f ↔ ∃ (c : TauCeti.Oracle.Single.Code), TauCeti.Oracle.Single.Code.eval O c = f"
+        },
+        {
+          "id": "OracleStageEvaluationPrimitiveRecursive",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Oracle.Single.Code.primrec_evaln_equivBitIndices",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/SingleOracle/Primrec.lean#L371",
+          "usage": "Direct for the binary-coded finite stages of a set. Compose with primitive-recursive domain-stage codes and compare the returned Option Halt against a fixed coded output/use pair, giving the primitive-recursive matrix for the Σ₂ bridge. Import `TauCeti.Computability.SingleOracle.Primrec`. Checked Lean signature\nTauCeti.Oracle.Single.Code.primrec_evaln_equivBitIndices :\n  Primrec fun (p : ℕ × ℕ × TauCeti.Oracle.Single.Code × ℕ) =>\n    TauCeti.Oracle.Single.Code.evaln (fun (z : ℕ) => some (if z ∈ Finset.equivBitIndices (Prod.fst p) then 1 else 0))\n      (Prod.fst (Prod.snd p)) (Prod.fst (Prod.snd (Prod.snd p))) (Prod.snd (Prod.snd (Prod.snd p)))"
+        },
+        {
+          "id": "OracleStageEventuallyCorrect",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Oracle.Single.Code.exists_eventually_evaln_setAnswers_eq_some_of_mem_eval",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/SingleOracle/Limit.lean#L125",
+          "usage": "Direct. Given a terminating relative computation with a value and monotone oracle stages, use the identity clock tending to infinity to get one fixed output/use record that occurs at all sufficiently large stages. Import `TauCeti.Computability.SingleOracle.Limit`. Checked Lean signature\nTauCeti.Oracle.Single.Code.exists_eventually_evaln_setAnswers_eq_some_of_mem_eval {n : ℕ}\n  {c : TauCeti.Oracle.Single.Code} {A : ℕ → Finset ℕ} (hA : Monotone A) {t : ℕ → ℕ}\n  (ht : Filter.Tendsto t Filter.atTop Filter.atTop) {y : ℕ}\n  (h : y ∈ TauCeti.Oracle.Single.Code.eval (Set.oracle (TauCeti.Enumeration.stageLimit A)) c n) :\n  ∃ (d : TauCeti.Oracle.Single.Code.Halt),\n    TauCeti.Oracle.Single.Code.Halt.output d = y ∧\n      ∀ᶠ (s : ℕ) in Filter.atTop,\n        TauCeti.Oracle.Single.Code.evaln (TauCeti.Oracle.Single.Code.setAnswers ↑(A s)) (t s) c n = some d"
+        },
+        {
+          "id": "PersistentOracleStageSound",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Oracle.Single.Code.mem_eval_of_eventually_evaln_eq_some",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/SingleOracle/Limit.lean#L104",
+          "usage": "Direct. To recover an actual value from the eventual equation, supply pointwise convergence and the soundness of the limiting answer function for the total characteristic oracle. Keep the complete Halt record fixed in the existential witness. Import `TauCeti.Computability.SingleOracle.Limit`. Checked Lean signature\nTauCeti.Oracle.Single.Code.mem_eval_of_eventually_evaln_eq_some {σs : ℕ → ℕ → Option ℕ} {σ : ℕ → Option ℕ} {n : ℕ}\n  {c : TauCeti.Oracle.Single.Code} {d : TauCeti.Oracle.Single.Code.Halt} {O : ℕ →. ℕ} {t : ℕ → ℕ}\n  (hO : ∀ (z y : ℕ), σ z = some y → y ∈ O z) (hσ : TauCeti.Approximation.Converges σs σ)\n  (hd : ∀ᶠ (s : ℕ) in Filter.atTop, TauCeti.Oracle.Single.Code.evaln (σs s) (t s) c n = some d) :\n  TauCeti.Oracle.Single.Code.Halt.output d ∈ TauCeti.Oracle.Single.Code.eval O c n"
+        },
+        {
+          "id": "OracleFiniteStageConvergence",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Oracle.Single.Code.converges_setAnswers_stageLimit",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/SingleOracle/Limit.lean#L115",
+          "usage": "Direct. Monotone finite halting stages give the pointwise convergence required by the persistent-run theorem. Import `TauCeti.Computability.SingleOracle.Limit`. Checked Lean signature\nTauCeti.Oracle.Single.Code.converges_setAnswers_stageLimit {A : ℕ → Finset ℕ} (hA : Monotone A) :\n  TauCeti.Approximation.Converges (fun (s : ℕ) => TauCeti.Oracle.Single.Code.setAnswers ↑(A s))\n    (TauCeti.Oracle.Single.Code.setAnswers (TauCeti.Enumeration.stageLimit A))"
+        },
+        {
+          "id": "OracleComputableRecursion",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "ComputableIn.nat_rec",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/RecursiveIn.lean#L151",
+          "usage": "Direct once the step and initial data are computable under the singleton oracle. Iterate a coded state at requirement visits and at stage boundaries. It supplies closure, while the bounded transition and its invariants remain to be established. Import `TauCeti.Computability.RecursiveIn`. Checked Lean signature\nComputableIn.nat_rec.{u_1, u_2} {α : Type u_1} {β : Type u_2} [Primcodable α] [Primcodable β] {O : Set (ℕ →. ℕ)}\n  {f : α → ℕ} {g : α → β} {h : α → ℕ × β → β} (hf : ComputableIn O f) (hg : ComputableIn O g) (hh : ComputableIn₂ O h) :\n  ComputableIn O fun (a : α) => Nat.rec (g a) (fun (n : ℕ) (b : β) => h a (n, b)) (f a)"
+        },
+        {
+          "id": "FiniteInjuryByCause",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Priority.finite_injurySet_and_ncard_le_of_subsingleton_causes",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Priority/Injury/Causes.lean#L58",
+          "usage": "Adaptation. Index successive requirement visits as microstages; record each lower marker before a visit and the set N before and after. For each higher upper requirement let its cause set be the singleton of this lower requirement's cancelled marker, or empty. Prove the cover of actual injuries and the subsingleton premise by the one-action rule before invoking this lemma. Import `TauCeti.Computability.Priority.Injury.Causes`. Checked Lean signature\nTauCeti.Priority.finite_injurySet_and_ncard_le_of_subsingleton_causes {A : ℕ → Finset ℕ} {r : ℕ → ℕ → Option ℕ} {e : ℕ}\n  (C : ℕ → Set ℕ) (hunique : ∀ i < e, Set.Subsingleton (C i))\n  (hcover : ∀ (s x : ℕ), x ∈ TauCeti.Priority.injuriesAt A r e s → ∃ i < e, x ∈ C i) :\n  Set.Finite (TauCeti.Priority.injurySet A r e) ∧ Set.ncard (TauCeti.Priority.injurySet A r e) ≤ e"
+        },
+        {
+          "id": "FiniteInjuryStops",
+          "repository": "https://github.com/TauCetiProject/TauCeti",
+          "revision": "91942aa9ff8cea04d0d9905b80f75c07ce2379c4",
+          "license": "Apache-2.0",
+          "declaration": "TauCeti.Priority.finite_injurySet_iff_eventually_eq_empty",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/91942aa9ff8cea04d0d9905b80f75c07ce2379c4/TauCeti/Computability/Priority/Injury/Basic.lean#L259",
+          "usage": "Direct for monotone finite contents at microstages. Turn finite injury numbers into an eventual lack of injury events. Separately use the fact that after the last cancellation a marker either persists from its first new assignment or stays absent, then take the common bound for finitely many higher markers. Import `TauCeti.Computability.Priority.Injury.Basic`. Checked Lean signature\nTauCeti.Priority.finite_injurySet_iff_eventually_eq_empty {A : ℕ → Finset ℕ} {r : ℕ → ℕ → Option ℕ} {e : ℕ}\n  (hA : Monotone A) :\n  Set.Finite (TauCeti.Priority.injurySet A r e) ↔\n    ∃ (s₀ : ℕ), ∀ (s : ℕ), s₀ ≤ s → TauCeti.Priority.injuriesAt A r e s = ∅"
+        }
+      ],
+      "investigation": "Steps 1 and 2 only. The proof inventory supplied by Step 1 contains 21 article results. I read all 15 pages of the supplied arXiv v1 PDF, including the proofs and the reference list, and checked the local PDF against the v1 download. Both files have SHA-256 02b08b6a2e9771019f9ef38a401e20c3ef2c520cace7a08152bd5b90df3260ce. Each main item's ID, title, statement, locator and URL are copied from that inventory. The article repeats the interpolation and dichotomy in several places. The inventory already assigns them stable IDs.\n\nProof repository. I inspected /home/lazyinspirit/Projects/nonrecursive-many-one-degrees-lean before the library search. It has an unborn HEAD, an import-only scaffold comment in Proofs.lean, a blank external-proof ledger and the prior inventory evidence. I found no project theorem declaration, import module containing a proof, or accepted local proof to reuse. The authenticated GitHub API listed zero branches and returned HTTP 409, “Git Repository is empty,” for its commits endpoint. The local lakefile, manifest, mathlib checkout and installed toolchain agree on Lean v4.36.0-rc2 and mathlib 65d730f7150f21fdfa32f3e73a3f549c1f96a0e9. https://github.com/Alphabeta-Math/nonrecursive-many-one-degrees-lean\n\nAlphabeta source access. I searched the local shared items, library, defects and Research Portal for the arXiv ID, title, author, Maslova and finite-one degrees. I checked the live portal index and the supplied article and defect-report routes, including the article subpage and the library-prefixed aliases. The live index returned 200 and had no collection for this article. The article and defect report both returned 404, and no matching local collection or report was present. This is a reading limit for article-specific portal statements and defect findings. All 21 main portal fields are null. There were no additional explicitly requested portal theorems. Seven shared-library prerequisites have direct public item URLs. I compared each quoted definition or statement against its local Markdown and the public full-item API and checked that each item page loads. ManyOneReducibilityOnNat quotes the exact ordinary natural-number clause of a page that also covers oracle and language versions. The other six quote their full Statement or Definition sections. https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419 https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419/prerequisite-omissions-and-potential-defects\n\nLean search and compatibility. I searched the pinned mathlib Computability modules and the corresponding finite-set, order-quotient, pairing and maximality modules. Mathlib is the Lean community's maintained base mathematics library, with Apache-2.0 at the exact pin. Its many-one and one-one predicates, many-one degree quotient, partial-recursive machinery and arbitrary-carrier finite-set lemmas apply with the recorded typeclasses and hypotheses. In particular, Set.Finite.exists_maximal applies to a finite nonempty subset of a transitive order and needs no finite ambient type. Set.Finite.preimage' applies to a finite target set with finite fibres above members of that set. I found no dedicated finite-one reducibility or finite-one degree implementation in the searched mathlib sources. https://github.com/leanprover-community/mathlib4/tree/65d730f7150f21fdfa32f3e73a3f549c1f96a0e9\n\nTau Ceti is a public downstream Lean library incubated by the Lean FRO and Mathlib Initiative. Its README describes adversarial review and CI for AI-authored contributions. The selected Apache-2.0 revision uses the same Lean v4.36.0-rc2 and pins mathlib 048fffa1dbcd080d3058fab41d8c188168595c22 upstream. I compiled the selected Tau Ceti source modules and their transitive Tau Ceti imports in the temporary workspace against this project's exact mathlib revision. I checked every ledger name and full type with Lean and ran #print axioms. Only propext, Classical.choice and Quot.sound occurred. I compared the pinned GitHub source files byte-for-byte with the checked source files and anchored the permalinks to the declaration lines. The relevant Tau Ceti modules are compatible with this pin in that isolated build. The repository's lake configuration and proof scaffold were left untouched. The ledger lists only declarations attached to an item with an intended use in its translation or proof. https://github.com/TauCetiProject/TauCeti/tree/91942aa9ff8cea04d0d9905b80f75c07ce2379c4\n\nI checked the GitHub trees, licenses and manifests of physicslib/physicslib4 at 82f4433cf76f3a6ccf2fff24faa495569e23583e and leanprover-community/physlib at 6231fbba670fa335efaf285c327cf518cda59e40. The former is a focused Hilbert's sixth problem project and the latter a maintained community physics library. Both are Apache-2.0 and use Lean v4.35.0 and mathlib 56a005855ea17e0b0958f73ec801ae140b0a1679. I found no applicable computability declarations in the inspected trees. I also inspected Lean Pool, a public complementary Lean project identified in Tau Ceti's README, at e110decb9d02249d99fa85a144e6a659dea91440. Its Apache-2.0 snapshot has the same v4.35.0 versions as the physics libraries. Its one-shot scheduling code is generic and its arithmetic machinery represents a different development. The selected Tau Ceti imports cover the applicable scheduling support on the actual pin. Tanner Duve's computability development has an Apache-2.0 license file and is relevant background for singleton-oracle recursion. Its checked e07f3a17c5285e777af6b5b08fb4059fdfb28379 snapshot pins Lean v4.24.0 and mathlib f897ebcf72cd16f89ab4577d0c826cd14afaafc7. Its arithmetic hierarchy files do not supply the needed level-two bridge, and the jump module contains admitted results. The applicable basic recursive-in definitions are available from pinned mathlib. None of these other repositories supplies a ledger entry. https://github.com/physicslib/physicslib4/tree/82f4433cf76f3a6ccf2fff24faa495569e23583e https://github.com/leanprover-community/physlib/tree/6231fbba670fa335efaf285c327cf518cda59e40 https://github.com/LeanPool/lean-pool/tree/e110decb9d02249d99fa85a144e6a659dea91440 https://github.com/tannerduve/computability/tree/e07f3a17c5285e777af6b5b08fb4059fdfb28379\n\nCoverage and outstanding work. The common representation is computable predicates and maps on Nat, a finite-one reduction with finite singleton preimages, and the antisymmetrization of its preorder. The many-one degree is mathlib's existing quotient. The map on finite-one degrees that forgets to the many-one degree is well defined by ReducibilityImplications. Its fibre over d models the article's F(d). The cylinder calculation uses the computable pairing and inverse, and the finite-set maximality result for Corollary 7 applies to F(d) with the greatest element removed. Complementation should descend by negating the same representative-level membership equivalence with each reduction witness and its fibres unchanged. A proof must check the induced bijection and inverse on the degree fibres. The RigidDegreeAntichain and MaslovaCeDichotomy entries are prior results quoted in the article. Searches in the selected GitHub Lean sources and code index for Maslova, finite-one reducibility and m-rigidity found no applicable proof for either. Their article locations are verified. I did not inspect the proofs of references [1], [2] or [6]. Maslova remains a standalone unformalized input to the co-c.e. case and Corollary 7. The cited antichain and measure/category result is independent of the proof of Corollary 7.\n\nProfile and local arguments. PiTwoDescendingCePresentation uses a common finite bound for all witnesses with j<k and a computable bounded test on the jointly coded parameters. ProfileRealization needs the injective c.e. enumeration only for the infinite coded subset R of Nat. Tau Ceti supplies it on Primcodable carriers, with c.e. membership and infinitude as explicit premises. The exact shared-library theorem uses the effectively encoded-set terminology. Preserve that scope when choosing the interface. With the profile fixed, the partial search for an ascending self-reduction has domain containing P by the finite-preimage result, and the cylinder reduction gives uniformly c.e. homogeneous rows via the range of a computable map on pairs. InfiniteHomogeneousRows needs a uniform greedy search on a coded stage witness and computable finite histories. Raw c.e. membership need not be decidable. CofiniteDomainLemma can reuse this result with the ranges of iterates of the patched total ascending map. For FiniteMarkerAvoidance the finite marker lookup and the construction of uniformly c.e. enlarged rows still need their own Lean arguments. Supplying these reductions and the two finite-fibre contradictions discharges LocalInterpolation.\n\nPriority and oracle arguments. The graph factors out fixed-stage stability and finite injury as the article already does. The lower test is nonconvergence for the chosen input. The upper test is whether a specified stage is followed by any change, which is the negation of a single c.e. search. HaltingSigmaOneCompleteness supplies the ordinary halting reduction, and the checked universal evaluator and parameter theorem give the concrete acceptable numbering. The halting oracle is the singleton total characteristic function of that paired halting set. Uniform c.e. rows can be presented as sections of coded domain stages. FiniteInjuryAndStabilization can use Tau Ceti's injury bounds after refining the article's visits to successive microstages. The cause sets and actual cancellation invariant are part of the construction proof. The remaining proof must establish the coded finite state transition, immediate cancellations, stage bound on inserted numbers, restraint stabilization, and the existential satisfaction of both requirements without deciding either antecedent. Tau Ceti's oracle recursion gives closure once the bounded step is shown oracle-computable. For the Σ₂ conclusion, the selected bounded evaluator and convergence lemmas give the needed direction of Post's theorem at level two. Take monotone domain stages of a code for the paired halting set. For an oracle computation, existentially quantify a stage bound and a single encoded Halt record containing output and use. For every later stage, require the primitive-recursive bounded evaluator against that stage's halting set with stage fuel to return that record. The forward implication uses eventual correctness for a clock tending to infinity. The reverse uses the fixed record and convergence. This gives the ∃∀ matrix for membership in N and hence a Π₂ presentation of its complement. The bridge and the priority construction have no complete checked implementation in this project. The exact Alphabeta oracle definition uses tape-machine terms, so any translation that refers explicitly to that machine model must justify its correspondence with the chosen relative-computability representation.\n\nThe acyclic graph retains all 21 main results, and each of the seven shared-library items is reached from a main result. The following counts are unique intermediate nodes, stopping traversal whenever a different main result is reached.\n\n- ReducibilityImplications (1) — ManyOneReducibilityOnNat\n- RigidDegreeAntichain (1) — ManyOneReducibilityOnNat\n- CylinderGreatestFiniteOneDegree (0)\n- ComplementCeDichotomy (0)\n- ProfileRealization (2) — ComputablyEnumerableSet, InfiniteCEInjectiveEnumeration\n- PiTwoDescendingCePresentation (2) — ArithmeticalHierarchyLevels, ComputablyEnumerableSet\n- ComputableInjectiveSection (0)\n- FiniteMarkerAvoidance (1) — ComputablyEnumerableSet\n- InfiniteHomogeneousRows (1) — ComputablyEnumerableSet\n- CofiniteDomainLemma (0)\n- LocalInterpolation (0)\n- PriorityRequirements (3) — AcceptableNumbering, ArithmeticalHierarchyLevels, RelativeComputabilityAndEnumerability\n- FixedStageRowStability (4) — AcceptableNumbering, ArithmeticalHierarchyLevels, HaltingSigmaOneCompleteness, RelativeComputabilityAndEnumerability\n- FiniteInjuryAndStabilization (0)\n- PullbackReductions (0)\n- HomogeneousRowsFromCylinderReduction (1) — ComputablyEnumerableSet\n- AscendingSelfReductionFromPullbackReduction (0)\n- PriorityConstructionEffectiveness (0)\n- MaslovaCeDichotomy (2) — ComputablyEnumerableSet, ManyOneReducibilityOnNat\n- NonrecursiveManyOneDegreeDichotomy (0)\n- ComplementationOrderIsomorphism (0)\n\nNo Step 3 translations or reviews were started."
+    },
+    "translations": {},
+    "translation": {
+      "type": "_root_.Set _root_.Nat → _root_.Set _root_.Nat → Prop",
+      "value": "fun A B => _root_.ManyOneReducible (fun n : _root_.Nat => n ∈ A) (fun n : _root_.Nat => n ∈ B)",
+      "source": "portal",
+      "sourceReason": "The plan selects the ordinary natural-number clause of Alphabeta Math’s def-computable-many-one-reducibility-interface as this standalone prerequisite and supplies no article endpoint for the item. The clause agrees with the convention on page 2 of arXiv:2609.00419v1. The article-specific Research Portal and defect-report URLs both returned HTTP 404, so no correction could be verified there. https://alphabetamath.cc/item/def-computable-many-one-reducibility-interface"
+    }
+  },
+  "answer": {
+    "accept": true,
+    "reasons": "Lean confirms that the endpoint is definitionally equal to the existence of a total computable f : ℕ → ℕ such that n ∈ A if and only if f(n) ∈ B for every n. This matches the ordinary many-one reducibility definition in the cited library entry and on page 2 of the original article. The article-specific defect report returned HTTP 404, so no statement-specific defect report could be checked."
+  }
+}

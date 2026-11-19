@@ -1,0 +1,28 @@
+{
+  "source_sha256": "6c525dacfe480ea292fc336475f15109b565f081831b829ea901173751c0be52",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/AscendingSelfReductionFromPullbackReduction.olean",
+      "Proofs/AscendingSelfReductionFromPullbackReduction.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/AscendingSelfReductionFromPullbackReduction-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'AscendingSelfReductionFromPullbackReduction' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

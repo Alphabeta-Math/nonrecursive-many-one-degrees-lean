@@ -1,0 +1,28 @@
+{
+  "source_sha256": "0fa91cfcffc9062da3f11c70b22abe67452496f69c78b6a935c2ad789f6d0290",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/RelativeComputabilityAndEnumerability.olean",
+      "Proofs/RelativeComputabilityAndEnumerability.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/RelativeComputabilityAndEnumerability-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'RelativeComputabilityAndEnumerability' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

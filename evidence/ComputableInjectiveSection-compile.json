@@ -1,0 +1,28 @@
+{
+  "source_sha256": "402e4463448e7ef039a6aeba1035be5794d02eeda22b864a2b85283c72e4c84b",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ComputableInjectiveSection.olean",
+      "Proofs/ComputableInjectiveSection.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ComputableInjectiveSection-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ComputableInjectiveSection' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

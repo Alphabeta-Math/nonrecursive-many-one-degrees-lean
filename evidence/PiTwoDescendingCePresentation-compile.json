@@ -1,0 +1,28 @@
+{
+  "source_sha256": "22ee40fc4fdc6b77c0b0283b86a0bd715ee58ee788103b9693ba5e1b5bda921c",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/PiTwoDescendingCePresentation.olean",
+      "Proofs/PiTwoDescendingCePresentation.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/PiTwoDescendingCePresentation-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'PiTwoDescendingCePresentation' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

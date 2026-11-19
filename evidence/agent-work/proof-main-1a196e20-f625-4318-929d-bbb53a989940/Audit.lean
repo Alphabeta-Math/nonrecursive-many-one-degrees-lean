@@ -1,0 +1,7 @@
+import Candidate
+
+#print axioms FiniteMarkerAvoidance
+#print axioms FiniteMarkerAvoidance.of_nonCE_marker_colors
+#print axioms InfiniteHomogeneousRows
+#print axioms ComputablyEnumerableSet.nat_rePred_iff
+#print axioms ComputablyEnumerableSet.nat_rePred_iff_exists_code

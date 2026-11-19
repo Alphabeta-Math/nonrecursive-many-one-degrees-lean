@@ -1,0 +1,28 @@
+{
+  "source_sha256": "4e9ba2ba4d12c79bb32e82e89d8211c898c16ffe83ceb0da62f14cad479eaa33",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/SingletonOracleTapeCompilation.olean",
+      "Proofs/SingletonOracleTapeCompilation.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/SingletonOracleTapeCompilation-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'SingletonOracleTapeCompilation' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

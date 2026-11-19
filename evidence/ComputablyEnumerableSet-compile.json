@@ -1,0 +1,28 @@
+{
+  "source_sha256": "8bdd84b07882617e30d71e9750a55bf000bf2122631b7ea2653085bee2445ab5",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ComputablyEnumerableSet.olean",
+      "Proofs/ComputablyEnumerableSet.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ComputablyEnumerableSet-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ComputablyEnumerableSet' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

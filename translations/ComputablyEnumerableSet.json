@@ -1,0 +1,6 @@
+{
+  "type": "∀ {α : Type*} (encode : α → _root_.List _root_.Bool) (decode : _root_.List _root_.Bool → _root_.Option α), _root_.Function.Injective encode → (∀ x, decode (encode x) = _root_.Option.some x) → (∀ w, w ∉ _root_.Set.range encode → decode w = _root_.Option.none) → _root_.Set α → Prop",
+  "value": "fun {α} encode _ _ _ _ A => A = ∅ ∨ ∃ e : _root_.Nat → α, _root_.Computable (fun n : _root_.Nat => encode (e n)) ∧ _root_.Set.range e = A",
+  "source": "portal",
+  "sourceReason": "The article uses computable enumerability without defining it, so the endpoint comes from Alphabeta Math’s shared-library item def-computably-enumerable-set. The definition keeps the chosen binary encoder and total decoder explicit and applies computability to the enumerator’s binary outputs. For languages, instantiate α with List σ and supply the chosen word encoder and decoder. The article-specific Research Portal and defect report both returned HTTP 404, so no correction could be verified. https://alphabetamath.cc/item/def-computably-enumerable-set"
+}

@@ -1,0 +1,2 @@
+import Proofs.ManyOneReducibilityOnNat
+#print axioms ManyOneReducibilityOnNat

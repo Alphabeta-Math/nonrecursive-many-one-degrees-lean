@@ -1,0 +1,10 @@
+import NonrecursiveManyOneDegreeDichotomy
+#print axioms NonrecursiveManyOneDegreeDichotomy
+#print axioms CylinderGreatestFiniteOneDegree
+#print axioms ComplementCeDichotomy
+#print axioms MaslovaCeDichotomy
+#print axioms LocalInterpolation
+#print axioms ComputablyEnumerableSet.nat_rePred_iff
+#print axioms ReducibilityImplications
+#print axioms ReducibilityImplications.finiteOneDegree_eq_iff
+#print axioms ReducibilityImplications.finiteOneTrans

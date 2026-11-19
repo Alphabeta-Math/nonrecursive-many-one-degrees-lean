@@ -1,0 +1,28 @@
+{
+  "source_sha256": "9721edc80a1e96ff48b670511bf7c0491b75404d7834a0f2d081aa137669ca00",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/HomogeneousRowsFromCylinderReduction.olean",
+      "Proofs/HomogeneousRowsFromCylinderReduction.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/HomogeneousRowsFromCylinderReduction-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'HomogeneousRowsFromCylinderReduction' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

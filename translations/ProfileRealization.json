@@ -1,0 +1,6 @@
+{
+  "type": "∀ P : _root_.Set _root_.Nat,\n  {xs : _root_.Fin 1 → _root_.Nat | xs 0 ∈ P} ∈\n      (_root_.ArithmeticalHierarchyLevels 2 1 (_root_.Nat.le_succ 1)).2.1 →\n    ∃ p : _root_.Nat → _root_.Nat,\n      _root_.Computable p ∧ _root_.Function.Surjective p ∧\n      {y : _root_.Nat | _root_.Set.Infinite (_root_.Set.preimage p ({y} : _root_.Set _root_.Nat))} = P ∧\n      (∃ s : _root_.Nat → _root_.Nat,\n        _root_.Computable s ∧ _root_.Function.RightInverse s p)",
+  "value": null,
+  "source": "article",
+  "sourceReason": "Lemma 1 in §2, p. 3 of arXiv:2609.00419v1 states this endpoint. The unary Π⁰₂ hypothesis uses the Π component of ArithmeticalHierarchyLevels at level 2 and arity 1. The article-specific Alphabeta Math Research Portal and the designated defect report both returned HTTP 404. No local counterpart or correction could be verified. https://arxiv.org/pdf/2609.00419v1#page=3 https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419 https://alphabetamath.cc/research-portal/nonrecursive-many-one-degrees-2609-00419/prerequisite-omissions-and-potential-defects"
+}

@@ -1,0 +1,2 @@
+import Proofs.NonrecursiveManyOneDegreeDichotomy
+#print axioms NonrecursiveManyOneDegreeDichotomy

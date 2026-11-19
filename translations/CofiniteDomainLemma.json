@@ -1,0 +1,6 @@
+{
+  "type": "∀ (A : _root_.Set _root_.Nat) (φ : _root_.Nat → _root_.Part _root_.Nat),\n  let cyl : _root_.Set _root_.Nat :=\n    {z | ∃ x n : _root_.Nat, x ∈ A ∧ z = _root_.Nat.pair x n}\n  ¬ _root_.ComputablePred (fun x : _root_.Nat => x ∈ A) →\n  ¬ (_root_.OneOneReducible (fun x : _root_.Nat => x ∈ A) (fun z : _root_.Nat => z ∈ cyl) ∧\n     _root_.OneOneReducible (fun z : _root_.Nat => z ∈ cyl) (fun x : _root_.Nat => x ∈ A)) →\n  _root_.Partrec φ →\n  (∀ x y : _root_.Nat, y ∈ φ x → x < y ∧ (y ∈ A ↔ x ∈ A)) →\n  _root_.Set.Infinite ({x : _root_.Nat | _root_.Part.Dom (φ x)}ᶜ)",
+  "value": null,
+  "source": "article",
+  "sourceReason": "Lemma 4 and Definition 3 in §3, p. 6 of arXiv:2609.00419v1 supply the endpoint. Nat.pair instantiates the fixed computable bijective pairing from §2. The Alphabeta Math article portal and its defect report returned HTTP 404. No local counterpart or correction for Lemma 4 was found."
+}

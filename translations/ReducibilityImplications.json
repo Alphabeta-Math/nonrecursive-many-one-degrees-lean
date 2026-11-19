@@ -1,0 +1,6 @@
+{
+  "type": "∀ X Y : _root_.Set _root_.Nat,\n  let finiteOneReducible : Prop :=\n    ∃ f : _root_.Nat → _root_.Nat, _root_.Computable f ∧\n      (∀ y : _root_.Nat, _root_.Set.Finite (_root_.Set.preimage f ({y} : _root_.Set _root_.Nat))) ∧\n      (∀ x : _root_.Nat, x ∈ X ↔ f x ∈ Y)\n  (_root_.OneOneReducible (fun x : _root_.Nat => x ∈ X) (fun y : _root_.Nat => y ∈ Y) → finiteOneReducible) ∧\n  (finiteOneReducible → _root_.ManyOneReducibilityOnNat X Y)",
+  "value": null,
+  "source": "article",
+  "sourceReason": "The two implications occur in §1, p. 1 of arXiv:2609.00419v1 and use the conventions stated in §2, p. 2. The article-specific Alphabeta Math portal and the supplied defect-report URL both returned HTTP 404. No correction for this result could be verified."
+}

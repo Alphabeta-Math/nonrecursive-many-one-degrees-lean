@@ -1,0 +1,6 @@
+{
+  "type": "(_root_.Nat → _root_.Nat → _root_.Part _root_.Nat) → Prop",
+  "value": "fun φ =>\n  let universal := _root_.Partrec₂ φ\n  let appendEntry (initialWord entry : _root_.Nat) : _root_.Nat :=\n    let place := 2 ^ (_root_.Nat.log2 entry + 1)\n    let withLength := initialWord * place + (place - 1)\n    withLength * (2 * place) + entry\n  (∀ e : _root_.Nat, _root_.Partrec (φ e)) ∧\n    (∀ f : _root_.Nat → _root_.Part _root_.Nat, _root_.Partrec f → ∃ e : _root_.Nat, φ e = f) ∧\n    universal ∧\n    ∃ s : _root_.Nat → _root_.Nat → _root_.Nat, _root_.Computable₂ s ∧\n      ∀ e a x : _root_.Nat, φ (s e a) x = φ e (appendEntry (appendEntry 0b1110 a) x)",
+  "source": "portal",
+  "sourceReason": "Alphabeta Math’s def-universal-and-acceptable-numbering supplies the standalone definition. The article has no standalone endpoint for this item. The Lean definition uses the binary sequence word specified by the linked def-natural-number-coding-of-finite-sequences. The article-specific Research Portal and defect report both returned HTTP 404, so no correction could be verified. https://alphabetamath.cc/item/def-universal-and-acceptable-numbering https://alphabetamath.cc/item/def-natural-number-coding-of-finite-sequences"
+}

@@ -1,0 +1,28 @@
+{
+  "source_sha256": "06259092f67770972542cdd9482a39c7c788bf4354b38149e3de183ba37eac3c",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/InfiniteHomogeneousRows.olean",
+      "Proofs/InfiniteHomogeneousRows.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/InfiniteHomogeneousRows-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'InfiniteHomogeneousRows' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

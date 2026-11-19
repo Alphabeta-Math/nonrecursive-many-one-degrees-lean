@@ -1,0 +1,143 @@
+⚠ [18238/18306] Built Proofs.ManyOneReducibilityOnNat (119s)
+warning: Proofs/ManyOneReducibilityOnNat.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18239/18306] Ran Proofs.ManyOneReducibilityOnNat:irArts
+warning: Proofs/ManyOneReducibilityOnNat.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18240/18306] Built Proofs.ComputablyEnumerableSet (119s)
+warning: Proofs/ComputablyEnumerableSet.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18241/18306] Ran Proofs.ComputablyEnumerableSet:irArts
+warning: Proofs/ComputablyEnumerableSet.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18242/18306] Built Proofs.ArithmeticalHierarchyLevels (119s)
+warning: Proofs/ArithmeticalHierarchyLevels.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18243/18306] Ran Proofs.ArithmeticalHierarchyLevels:irArts
+warning: Proofs/ArithmeticalHierarchyLevels.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18244/18306] Built Proofs.RelativeComputabilityAndEnumerability (119s)
+warning: Proofs/RelativeComputabilityAndEnumerability.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18245/18306] Ran Proofs.RelativeComputabilityAndEnumerability:irArts
+warning: Proofs/RelativeComputabilityAndEnumerability.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18246/18306] Built Proofs.AcceptableNumbering (119s)
+warning: Proofs/AcceptableNumbering.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18247/18306] Ran Proofs.AcceptableNumbering:irArts
+warning: Proofs/AcceptableNumbering.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18248/18306] Built Proofs.FiniteInjuryAndStabilization (119s)
+warning: Proofs/FiniteInjuryAndStabilization.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18249/18306] Ran Proofs.FiniteInjuryAndStabilization:irArts
+warning: Proofs/FiniteInjuryAndStabilization.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18250/18306] Built Proofs.PriorityBoundedOracleSearches (119s)
+warning: Proofs/PriorityBoundedOracleSearches.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18251/18306] Ran Proofs.PriorityBoundedOracleSearches:irArts
+warning: Proofs/PriorityBoundedOracleSearches.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18252/18306] Built Proofs.ComputableInjectiveSection (119s)
+warning: Proofs/ComputableInjectiveSection.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18253/18306] Ran Proofs.ComputableInjectiveSection:irArts
+warning: Proofs/ComputableInjectiveSection.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18254/18306] Built Proofs.InfiniteCEInjectiveEnumeration (114s)
+warning: Proofs/InfiniteCEInjectiveEnumeration.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18255/18306] Ran Proofs.InfiniteCEInjectiveEnumeration:irArts
+warning: Proofs/InfiniteCEInjectiveEnumeration.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18256/18306] Built Proofs.HaltingSigmaOneCompleteness (114s)
+warning: Proofs/HaltingSigmaOneCompleteness.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18257/18306] Ran Proofs.HaltingSigmaOneCompleteness:irArts
+warning: Proofs/HaltingSigmaOneCompleteness.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18258/18306] Built Proofs.ReducibilityImplications (114s)
+warning: Proofs/ReducibilityImplications.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18259/18306] Ran Proofs.ReducibilityImplications:irArts
+warning: Proofs/ReducibilityImplications.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18260/18306] Built Proofs.RigidDegreeAntichain (115s)
+warning: Proofs/RigidDegreeAntichain.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18261/18306] Ran Proofs.RigidDegreeAntichain:irArts
+warning: Proofs/RigidDegreeAntichain.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18262/18306] Built Proofs.PiTwoDescendingCePresentation (115s)
+warning: Proofs/PiTwoDescendingCePresentation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18263/18306] Ran Proofs.PiTwoDescendingCePresentation:irArts
+warning: Proofs/PiTwoDescendingCePresentation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18264/18306] Built Proofs.PriorityCodedVisitTrace (116s)
+warning: Proofs/PriorityCodedVisitTrace.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18265/18306] Ran Proofs.PriorityCodedVisitTrace:irArts
+warning: Proofs/PriorityCodedVisitTrace.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18266/18306] Built Proofs.InfiniteHomogeneousRows (116s)
+warning: Proofs/InfiniteHomogeneousRows.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18267/18306] Ran Proofs.InfiniteHomogeneousRows:irArts
+warning: Proofs/InfiniteHomogeneousRows.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18268/18306] Built Proofs.OracleNegativePullbackDecision (134s)
+warning: Proofs/OracleNegativePullbackDecision.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Proofs/OracleNegativePullbackDecision.lean:502:22: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Proofs/OracleNegativePullbackDecision.lean:1252:52: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Proofs/OracleNegativePullbackDecision.lean:1259:65: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [18269/18306] Ran Proofs.OracleNegativePullbackDecision:irArts
+warning: Proofs/OracleNegativePullbackDecision.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18270/18306] Built Proofs.CylinderGreatestFiniteOneDegree (22s)
+warning: Proofs/CylinderGreatestFiniteOneDegree.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18271/18306] Ran Proofs.CylinderGreatestFiniteOneDegree:irArts
+warning: Proofs/CylinderGreatestFiniteOneDegree.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18272/18306] Built Proofs.CofiniteDomainLemma (21s)
+warning: Proofs/CofiniteDomainLemma.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18273/18306] Ran Proofs.CofiniteDomainLemma:irArts
+warning: Proofs/CofiniteDomainLemma.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18274/18306] Built Proofs.ComplementationOrderIsomorphism (22s)
+warning: Proofs/ComplementationOrderIsomorphism.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18275/18306] Ran Proofs.ComplementationOrderIsomorphism:irArts
+warning: Proofs/ComplementationOrderIsomorphism.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18276/18306] Built Proofs.ProfileRealization (22s)
+warning: Proofs/ProfileRealization.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18277/18306] Ran Proofs.ProfileRealization:irArts
+warning: Proofs/ProfileRealization.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18278/18306] Built Proofs.FiniteMarkerAvoidance (21s)
+warning: Proofs/FiniteMarkerAvoidance.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18279/18306] Ran Proofs.FiniteMarkerAvoidance:irArts
+warning: Proofs/FiniteMarkerAvoidance.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18280/18306] Built Proofs.FixedStageRowStability (5.1s)
+warning: Proofs/FixedStageRowStability.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18281/18306] Ran Proofs.FixedStageRowStability:irArts
+warning: Proofs/FixedStageRowStability.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18282/18306] Built Proofs.SingletonOracleTapeCompilation (6.0s)
+warning: Proofs/SingletonOracleTapeCompilation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18283/18306] Ran Proofs.SingletonOracleTapeCompilation:irArts
+warning: Proofs/SingletonOracleTapeCompilation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18284/18306] Built Proofs.PullbackReductions (3.4s)
+warning: Proofs/PullbackReductions.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18285/18306] Ran Proofs.PullbackReductions:irArts
+warning: Proofs/PullbackReductions.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18286/18306] Built Proofs.HomogeneousRowsFromCylinderReduction (3.5s)
+warning: Proofs/HomogeneousRowsFromCylinderReduction.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18287/18306] Ran Proofs.HomogeneousRowsFromCylinderReduction:irArts
+warning: Proofs/HomogeneousRowsFromCylinderReduction.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18288/18306] Built Proofs.AscendingSelfReductionFromPullbackReduction (3.5s)
+warning: Proofs/AscendingSelfReductionFromPullbackReduction.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18289/18306] Ran Proofs.AscendingSelfReductionFromPullbackReduction:irArts
+warning: Proofs/AscendingSelfReductionFromPullbackReduction.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18290/18306] Built Proofs.CETapeOracleSigmaTwo (16s)
+warning: Proofs/CETapeOracleSigmaTwo.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18291/18306] Ran Proofs.CETapeOracleSigmaTwo:irArts
+warning: Proofs/CETapeOracleSigmaTwo.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18292/18306] Built Proofs.PriorityRequirements (3.4s)
+warning: Proofs/PriorityRequirements.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18293/18306] Ran Proofs.PriorityRequirements:irArts
+warning: Proofs/PriorityRequirements.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18294/18306] Built Proofs.LocalInterpolation (2.9s)
+warning: Proofs/LocalInterpolation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18295/18306] Ran Proofs.LocalInterpolation:irArts
+warning: Proofs/LocalInterpolation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18296/18306] Built Proofs.MaslovaCeDichotomy (3.1s)
+warning: Proofs/MaslovaCeDichotomy.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18297/18306] Ran Proofs.MaslovaCeDichotomy:irArts
+warning: Proofs/MaslovaCeDichotomy.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18298/18306] Built Proofs.PriorityConstructionEffectiveness (3.4s)
+warning: Proofs/PriorityConstructionEffectiveness.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18299/18306] Ran Proofs.PriorityConstructionEffectiveness:irArts
+warning: Proofs/PriorityConstructionEffectiveness.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18300/18306] Built Proofs.ComplementCeDichotomy (2.7s)
+warning: Proofs/ComplementCeDichotomy.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18301/18306] Ran Proofs.ComplementCeDichotomy:irArts
+warning: Proofs/ComplementCeDichotomy.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18302/18306] Built Proofs.NonrecursiveManyOneDegreeDichotomy (2.9s)
+warning: Proofs/NonrecursiveManyOneDegreeDichotomy.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18303/18306] Ran Proofs.NonrecursiveManyOneDegreeDichotomy:irArts
+warning: Proofs/NonrecursiveManyOneDegreeDichotomy.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [18304/18306] Built Proofs (5.5s)
+Build completed successfully (18306 jobs).

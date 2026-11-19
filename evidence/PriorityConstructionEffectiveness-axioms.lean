@@ -1,0 +1,2 @@
+import Proofs.PriorityConstructionEffectiveness
+#print axioms PriorityConstructionEffectiveness

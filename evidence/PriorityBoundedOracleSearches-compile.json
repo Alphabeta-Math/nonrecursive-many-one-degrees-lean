@@ -1,0 +1,28 @@
+{
+  "source_sha256": "8ecbac5cf40f43a2f018aedb4b23210aa5b1810246d1fd5b3d72dcf5684141a5",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/PriorityBoundedOracleSearches.olean",
+      "Proofs/PriorityBoundedOracleSearches.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/PriorityBoundedOracleSearches-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'PriorityBoundedOracleSearches' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

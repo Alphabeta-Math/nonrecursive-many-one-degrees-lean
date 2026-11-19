@@ -1,0 +1,6 @@
+{
+  "type": "_root_.Set _root_.Nat → _root_.Set _root_.Nat → Prop",
+  "value": "fun A B => _root_.ManyOneReducible (fun n : _root_.Nat => n ∈ A) (fun n : _root_.Nat => n ∈ B)",
+  "source": "portal",
+  "sourceReason": "The plan selects the ordinary natural-number clause of Alphabeta Math’s def-computable-many-one-reducibility-interface as this standalone prerequisite and supplies no article endpoint for the item. The clause agrees with the convention on page 2 of arXiv:2609.00419v1. The article-specific Research Portal and defect-report URLs both returned HTTP 404, so no correction could be verified there. https://alphabetamath.cc/item/def-computable-many-one-reducibility-interface"
+}

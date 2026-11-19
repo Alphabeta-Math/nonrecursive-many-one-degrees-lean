@@ -1,0 +1,28 @@
+{
+  "source_sha256": "a73e1c3e1c30c1e4d8521fd5c303fe6172288366f19fcc140efe413504ccc13c",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/FiniteInjuryAndStabilization.olean",
+      "Proofs/FiniteInjuryAndStabilization.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/FiniteInjuryAndStabilization-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'FiniteInjuryAndStabilization' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

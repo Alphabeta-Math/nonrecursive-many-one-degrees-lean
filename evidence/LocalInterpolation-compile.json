@@ -1,0 +1,28 @@
+{
+  "source_sha256": "3aef5b4acd5ba5f928501abfac5ddcf10d66b98446b56c024c7ddf9c86c96707",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/LocalInterpolation.olean",
+      "Proofs/LocalInterpolation.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/LocalInterpolation-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'LocalInterpolation' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

@@ -1,0 +1,28 @@
+{
+  "source_sha256": "ff06d2de6fe92585ebc299ec34444b532460849cb978920b508e48e5194552c3",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/MaslovaCeDichotomy.olean",
+      "Proofs/MaslovaCeDichotomy.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/MaslovaCeDichotomy-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'MaslovaCeDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

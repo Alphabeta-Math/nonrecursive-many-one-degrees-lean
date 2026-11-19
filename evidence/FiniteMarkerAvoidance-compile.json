@@ -1,0 +1,28 @@
+{
+  "source_sha256": "f15c10e497758159819008317b4a20ff4bad3000ef590500a1e41769dc2254f0",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/FiniteMarkerAvoidance.olean",
+      "Proofs/FiniteMarkerAvoidance.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/FiniteMarkerAvoidance-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'FiniteMarkerAvoidance' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

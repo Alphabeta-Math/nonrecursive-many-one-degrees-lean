@@ -1,0 +1,6 @@
+{
+  "type": "∀ (p : _root_.Nat → _root_.Nat),\n  _root_.Computable p → _root_.Function.Surjective p →\n    ∃ s : _root_.Nat → _root_.Nat,\n      _root_.Computable s ∧ _root_.Function.Injective s ∧\n      (∀ y : _root_.Nat, p (s y) = y) ∧\n      (∀ y n : _root_.Nat, p n = y → s y ≤ n)",
+  "value": null,
+  "source": "article",
+  "sourceReason": "The endpoint is the unnumbered computable injective section result in §2, p. 4 of arXiv:2609.00419v1. The last conjunct preserves the article’s least-preimage convention for s. The article-specific Alphabeta Math portal and the supplied defect report both returned HTTP 404, and no local counterpart was found, so any correction for this result remains unverified. https://arxiv.org/pdf/2609.00419v1#page=4"
+}

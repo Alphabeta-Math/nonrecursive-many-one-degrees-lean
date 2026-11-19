@@ -1,0 +1,2 @@
+import Proofs.ComplementCeDichotomy
+#print axioms ComplementCeDichotomy

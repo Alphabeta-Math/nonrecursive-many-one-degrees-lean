@@ -1,0 +1,28 @@
+{
+  "source_sha256": "7c066ba706bc28947ab67f1342b8063250bac108b67885552e95b009c057891c",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/PullbackReductions.olean",
+      "Proofs/PullbackReductions.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/PullbackReductions-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'PullbackReductions' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

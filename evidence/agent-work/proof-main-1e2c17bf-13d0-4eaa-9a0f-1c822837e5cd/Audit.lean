@@ -1,0 +1,3 @@
+import Proofs.FiniteInjuryAndStabilization
+#print axioms FiniteInjuryAndStabilization
+#print axioms FiniteInjuryAndStabilization.of_trace

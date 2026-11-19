@@ -1,0 +1,28 @@
+{
+  "source_sha256": "bdcd478a36b6a10475d53ae010a5b1f2db122cd675008e6fb90f1a5f510c0e25",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/CETapeOracleSigmaTwo.olean",
+      "Proofs/CETapeOracleSigmaTwo.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/CETapeOracleSigmaTwo-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'CETapeOracleSigmaTwo' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

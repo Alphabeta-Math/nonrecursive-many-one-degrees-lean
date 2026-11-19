@@ -1,0 +1,28 @@
+{
+  "source_sha256": "8a19dfa2233e8fb85578c5efd69f539c44c2b70923af26832ec69ac422500c99",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/AcceptableNumbering.olean",
+      "Proofs/AcceptableNumbering.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/AcceptableNumbering-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'AcceptableNumbering' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

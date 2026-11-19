@@ -1,0 +1,6 @@
+{
+  "type": "∀ A : _root_.Set _root_.Nat,\n  let cyl : _root_.Set _root_.Nat :=\n    {z | ∃ x n : _root_.Nat, x ∈ A ∧ z = _root_.Nat.pair x n}\n  let finiteOneReducible (X Y : _root_.Set _root_.Nat) : Prop :=\n    ∃ f : _root_.Nat → _root_.Nat, _root_.Computable f ∧\n      (∀ y : _root_.Nat, _root_.Set.Finite (_root_.Set.preimage f ({y} : _root_.Set _root_.Nat))) ∧\n      (∀ x : _root_.Nat, x ∈ X ↔ f x ∈ Y)\n  _root_.ManyOneDegree.of cyl = _root_.ManyOneDegree.of A ∧\n    (∀ B : _root_.Set _root_.Nat,\n      _root_.ManyOneDegree.of B = _root_.ManyOneDegree.of A → finiteOneReducible B cyl)",
+  "value": null,
+  "source": "article",
+  "sourceReason": "The endpoint is the unnumbered statement in §1, p. 1 of arXiv:2609.00419v1. The translation uses Nat.pair for the fixed computable pairing and expresses the finite-one degree order on representatives, following §2, pp. 2–3. The article-specific Alphabeta Math portal and the supplied defect-report URL both returned HTTP 404, so no correction for this result could be verified. https://arxiv.org/pdf/2609.00419v1#page=1"
+}

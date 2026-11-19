@@ -1,0 +1,28 @@
+{
+  "source_sha256": "98e54dafccb92a739b090bb8fc60914a053a322dc95d41a910508281616e8fdd",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/PriorityCodedVisitTrace.olean",
+      "Proofs/PriorityCodedVisitTrace.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/PriorityCodedVisitTrace-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'PriorityCodedVisitTrace' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

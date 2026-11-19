@@ -1,0 +1,6 @@
+{
+  "type": "∀ {α : Type*} (encode : α → _root_.List _root_.Bool)\n    (decode : _root_.List _root_.Bool → _root_.Option α)\n    (hInjective : _root_.Function.Injective encode)\n    (hDecode : ∀ x : α, decode (encode x) = _root_.Option.some x)\n    (hInvalid : ∀ w : _root_.List _root_.Bool,\n      w ∉ _root_.Set.range encode → decode w = _root_.Option.none)\n    (A : _root_.Set α),\n    _root_.ComputablyEnumerableSet encode decode hInjective hDecode hInvalid A →\n    _root_.Set.Infinite A →\n    ∃ f : _root_.Nat → α,\n      _root_.Computable (fun n : _root_.Nat => encode (f n)) ∧\n      _root_.Function.Injective f ∧ _root_.Set.range f = A",
+  "value": null,
+  "source": "portal",
+  "sourceReason": "Alphabeta Math’s shared-library item thm-infinite-ce-sets-have-computable-injective-enumerations states the theorem for arbitrary effectively encoded sets. Page 4 of arXiv:2609.00419v1 uses the natural-number instance. The translation uses the same binary encoding and decoding convention as ComputablyEnumerableSet. The article-specific Research Portal and designated defect report both returned HTTP 404, so any correction remains unverified. https://alphabetamath.cc/item/thm-infinite-ce-sets-have-computable-injective-enumerations"
+}

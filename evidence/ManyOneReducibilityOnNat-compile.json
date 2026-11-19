@@ -1,0 +1,28 @@
+{
+  "source_sha256": "68d233cfcea2232e6fc9e4ee605f5930564d6a08ac23d0974ac80ee9646474c6",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ManyOneReducibilityOnNat.olean",
+      "Proofs/ManyOneReducibilityOnNat.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ManyOneReducibilityOnNat-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ManyOneReducibilityOnNat' depends on axioms: [propext, Quot.sound]\n"
+  },
+  "ok": true
+}

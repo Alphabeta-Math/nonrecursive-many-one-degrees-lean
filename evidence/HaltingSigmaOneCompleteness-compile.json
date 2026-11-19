@@ -1,0 +1,28 @@
+{
+  "source_sha256": "07e2c7ed7f5adf19732df2f73f52e11c089f7ca3f79def76fcd92c407ba5555f",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/HaltingSigmaOneCompleteness.olean",
+      "Proofs/HaltingSigmaOneCompleteness.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/HaltingSigmaOneCompleteness-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'HaltingSigmaOneCompleteness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

@@ -1,0 +1,28 @@
+{
+  "source_sha256": "fab4f58d473fc1d2278ee714367b2931499e72bc84cc952ac0fef5abdec28694",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/PriorityConstructionEffectiveness.olean",
+      "Proofs/PriorityConstructionEffectiveness.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/PriorityConstructionEffectiveness-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'PriorityConstructionEffectiveness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

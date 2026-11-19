@@ -1,0 +1,2 @@
+import Proofs.FiniteInjuryAndStabilization
+#print axioms FiniteInjuryAndStabilization

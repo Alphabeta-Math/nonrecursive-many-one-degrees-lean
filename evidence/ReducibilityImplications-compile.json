@@ -1,0 +1,28 @@
+{
+  "source_sha256": "fc1350cb9372ef1828a8240f852e8a12a8f513c72b83800078f1a65c7f2829b8",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/ReducibilityImplications.olean",
+      "Proofs/ReducibilityImplications.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/ReducibilityImplications-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'ReducibilityImplications' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

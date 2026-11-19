@@ -1,0 +1,17 @@
+import Mathlib
+#check Nat.le_induction
+#check Nat.le_inductionOn
+#check Nat.strong_induction_on
+#check Nat.strongRecOn
+#check Set.Finite.toFinset
+#check Set.finite_image_iff
+#check Set.Finite.image
+#check Set.Finite.subset
+#check Set.Finite.bddAbove
+#check Finset.exists_max_image
+#check Finset.not_nonempty_iff_eq_empty
+#check Finset.mem_toFinset
+#check Set.Finite.mem_toFinset
+#check Option.some.inj
+#check Option.getD_some
+#check Set.prodMk_mem_set_prod_eq

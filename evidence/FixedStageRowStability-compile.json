@@ -1,0 +1,28 @@
+{
+  "source_sha256": "471e0c86466c4a1c3bdc831f710ead6049238fef3c7f3e721fc7d2fa7bbae729",
+  "commands": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Proofs/FixedStageRowStability.olean",
+      "Proofs/FixedStageRowStability.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "evidence/FixedStageRowStability-axioms.lean"
+    ]
+  ],
+  "build": {
+    "code": 0,
+    "output": ""
+  },
+  "axioms": {
+    "code": 0,
+    "output": "'FixedStageRowStability' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "ok": true
+}

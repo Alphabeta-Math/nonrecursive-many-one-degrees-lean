@@ -1,0 +1,2 @@
+import Proofs.PiTwoDescendingCePresentation
+#print axioms PiTwoDescendingCePresentation
