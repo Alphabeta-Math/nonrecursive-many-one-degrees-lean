@@ -6,123 +6,31 @@ All listed results compiled and passed the axiom audit.
 
 ## Dependency graph
 
+For readability, this diagram shows only selected formalized results from the
+article and the dependencies that connect them. See the
+[full proof dependency graph](proof-graph.json) for all 33 items and their exact
+Lean dependencies.
+
 ```mermaid
-graph TD
-  ManyOneReducibilityOnNat["ManyOneReducibilityOnNat"]
-  ComputablyEnumerableSet["ComputablyEnumerableSet"]
-  InfiniteCEInjectiveEnumeration["InfiniteCEInjectiveEnumeration"]
-  ComputablyEnumerableSet --> InfiniteCEInjectiveEnumeration
-  ArithmeticalHierarchyLevels["ArithmeticalHierarchyLevels"]
-  RelativeComputabilityAndEnumerability["RelativeComputabilityAndEnumerability"]
-  AcceptableNumbering["AcceptableNumbering"]
-  HaltingSigmaOneCompleteness["HaltingSigmaOneCompleteness"]
-  AcceptableNumbering --> HaltingSigmaOneCompleteness
-  ArithmeticalHierarchyLevels --> HaltingSigmaOneCompleteness
-  ReducibilityImplications["ReducibilityImplications"]
-  ManyOneReducibilityOnNat --> ReducibilityImplications
-  RigidDegreeAntichain["RigidDegreeAntichain"]
-  ManyOneReducibilityOnNat --> RigidDegreeAntichain
-  CylinderGreatestFiniteOneDegree["CylinderGreatestFiniteOneDegree"]
-  ReducibilityImplications --> CylinderGreatestFiniteOneDegree
-  ComplementCeDichotomy["ComplementCeDichotomy"]
-  MaslovaCeDichotomy --> ComplementCeDichotomy
-  ComplementationOrderIsomorphism --> ComplementCeDichotomy
-  ComputablyEnumerableSet --> ComplementCeDichotomy
-  ProfileRealization["ProfileRealization"]
-  PiTwoDescendingCePresentation --> ProfileRealization
-  ComputableInjectiveSection --> ProfileRealization
-  InfiniteCEInjectiveEnumeration --> ProfileRealization
-  ArithmeticalHierarchyLevels --> ProfileRealization
-  ComputablyEnumerableSet --> ProfileRealization
-  PiTwoDescendingCePresentation["PiTwoDescendingCePresentation"]
-  ArithmeticalHierarchyLevels --> PiTwoDescendingCePresentation
-  ComputablyEnumerableSet --> PiTwoDescendingCePresentation
-  ComputableInjectiveSection["ComputableInjectiveSection"]
-  FiniteMarkerAvoidance["FiniteMarkerAvoidance"]
-  InfiniteHomogeneousRows --> FiniteMarkerAvoidance
-  ComputablyEnumerableSet --> FiniteMarkerAvoidance
-  InfiniteHomogeneousRows["InfiniteHomogeneousRows"]
-  ComputablyEnumerableSet --> InfiniteHomogeneousRows
-  CofiniteDomainLemma["CofiniteDomainLemma"]
-  InfiniteHomogeneousRows --> CofiniteDomainLemma
-  ComputablyEnumerableSet --> CofiniteDomainLemma
-  LocalInterpolation["LocalInterpolation"]
-  PriorityRequirements --> LocalInterpolation
-  ProfileRealization --> LocalInterpolation
-  PullbackReductions --> LocalInterpolation
-  HomogeneousRowsFromCylinderReduction --> LocalInterpolation
-  AscendingSelfReductionFromPullbackReduction --> LocalInterpolation
-  CylinderGreatestFiniteOneDegree --> LocalInterpolation
-  ComputablyEnumerableSet --> LocalInterpolation
-  HaltingSigmaOneCompleteness --> LocalInterpolation
-  PriorityRequirements["PriorityRequirements"]
+flowchart TD
+  FiniteMarkerAvoidance["Finite-marker avoidance (Lemma 2)"]
+  CofiniteDomainLemma["Cofinite-domain lemma (Lemma 4)"]
+  PriorityRequirements["Priority construction"]
+  ProfileRealization["Profile realization (Lemma 1)"]
+  LocalInterpolation["Local interpolation (Theorem 5)"]
+  MaslovaCeDichotomy["Maslova’s c.e. dichotomy"]
+  CylinderGreatestFiniteOneDegree["Cylinder gives the greatest finite-one degree"]
+  NonrecursiveManyOneDegreeDichotomy["One-or-infinity dichotomy (Corollary 7)"]
+
   FiniteMarkerAvoidance --> PriorityRequirements
   CofiniteDomainLemma --> PriorityRequirements
-  FiniteInjuryAndStabilization --> PriorityRequirements
-  RelativeComputabilityAndEnumerability --> PriorityRequirements
-  ArithmeticalHierarchyLevels --> PriorityRequirements
-  ComputablyEnumerableSet --> PriorityRequirements
-  PriorityCodedVisitTrace --> PriorityRequirements
-  SingletonOracleTapeCompilation --> PriorityRequirements
-  CETapeOracleSigmaTwo --> PriorityRequirements
-  FixedStageRowStability["FixedStageRowStability"]
-  RelativeComputabilityAndEnumerability --> FixedStageRowStability
-  AcceptableNumbering --> FixedStageRowStability
-  OracleNegativePullbackDecision --> FixedStageRowStability
-  FiniteInjuryAndStabilization["FiniteInjuryAndStabilization"]
-  PullbackReductions["PullbackReductions"]
-  ReducibilityImplications --> PullbackReductions
-  ManyOneReducibilityOnNat --> PullbackReductions
-  HomogeneousRowsFromCylinderReduction["HomogeneousRowsFromCylinderReduction"]
-  ComputablyEnumerableSet --> HomogeneousRowsFromCylinderReduction
-  AscendingSelfReductionFromPullbackReduction["AscendingSelfReductionFromPullbackReduction"]
-  PriorityConstructionEffectiveness["PriorityConstructionEffectiveness"]
-  PriorityRequirements --> PriorityConstructionEffectiveness
-  RelativeComputabilityAndEnumerability --> PriorityConstructionEffectiveness
-  ComputablyEnumerableSet --> PriorityConstructionEffectiveness
-  OracleNegativePullbackDecision --> PriorityConstructionEffectiveness
-  PriorityCodedVisitTrace --> PriorityConstructionEffectiveness
-  SingletonOracleTapeCompilation --> PriorityConstructionEffectiveness
-  FiniteMarkerAvoidance --> PriorityConstructionEffectiveness
-  CofiniteDomainLemma --> PriorityConstructionEffectiveness
-  MaslovaCeDichotomy["MaslovaCeDichotomy"]
-  ManyOneReducibilityOnNat --> MaslovaCeDichotomy
-  ComputablyEnumerableSet --> MaslovaCeDichotomy
-  FiniteMarkerAvoidance --> MaslovaCeDichotomy
-  CofiniteDomainLemma --> MaslovaCeDichotomy
+  PriorityRequirements --> LocalInterpolation
+  ProfileRealization --> LocalInterpolation
   PriorityRequirements --> MaslovaCeDichotomy
-  HaltingSigmaOneCompleteness --> MaslovaCeDichotomy
-  ProfileRealization --> MaslovaCeDichotomy
-  PullbackReductions --> MaslovaCeDichotomy
-  HomogeneousRowsFromCylinderReduction --> MaslovaCeDichotomy
-  AscendingSelfReductionFromPullbackReduction --> MaslovaCeDichotomy
-  CylinderGreatestFiniteOneDegree --> MaslovaCeDichotomy
-  ReducibilityImplications --> MaslovaCeDichotomy
-  NonrecursiveManyOneDegreeDichotomy["NonrecursiveManyOneDegreeDichotomy"]
-  CylinderGreatestFiniteOneDegree --> NonrecursiveManyOneDegreeDichotomy
-  ComplementCeDichotomy --> NonrecursiveManyOneDegreeDichotomy
-  MaslovaCeDichotomy --> NonrecursiveManyOneDegreeDichotomy
   LocalInterpolation --> NonrecursiveManyOneDegreeDichotomy
-  ComputablyEnumerableSet --> NonrecursiveManyOneDegreeDichotomy
-  ReducibilityImplications --> NonrecursiveManyOneDegreeDichotomy
-  ComplementationOrderIsomorphism["ComplementationOrderIsomorphism"]
-  ReducibilityImplications --> ComplementationOrderIsomorphism
-  OracleNegativePullbackDecision["OracleNegativePullbackDecision"]
-  RelativeComputabilityAndEnumerability --> OracleNegativePullbackDecision
-  PriorityBoundedOracleSearches["PriorityBoundedOracleSearches"]
-  PriorityCodedVisitTrace["PriorityCodedVisitTrace"]
-  PriorityBoundedOracleSearches --> PriorityCodedVisitTrace
-  SingletonOracleTapeCompilation["SingletonOracleTapeCompilation"]
-  OracleNegativePullbackDecision --> SingletonOracleTapeCompilation
-  RelativeComputabilityAndEnumerability --> SingletonOracleTapeCompilation
-  CETapeOracleSigmaTwo["CETapeOracleSigmaTwo"]
-  OracleNegativePullbackDecision --> CETapeOracleSigmaTwo
-  RelativeComputabilityAndEnumerability --> CETapeOracleSigmaTwo
-  ArithmeticalHierarchyLevels --> CETapeOracleSigmaTwo
-  ComputablyEnumerableSet --> CETapeOracleSigmaTwo
+  MaslovaCeDichotomy --> NonrecursiveManyOneDegreeDichotomy
+  CylinderGreatestFiniteOneDegree --> NonrecursiveManyOneDegreeDichotomy
 ```
-
-[Proof dependency graph](proof-graph.json) includes exact Lean suppliers and coverage.
 
 ## External proofs
 
